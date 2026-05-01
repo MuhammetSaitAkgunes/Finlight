@@ -1,0 +1,29 @@
+<header class="top-bar">
+    <div class="welcome-text">
+        @if (ViewData["PageKicker"] is not null)
+        {
+            <span class="page-kicker">@ViewData["PageKicker"]</span>
+        }
+        <h1>@ViewData["PageTitle"]</h1>
+        @if (ViewData["PageDescription"] is not null)
+        {
+            <p>@ViewData["PageDescription"]</p>
+        }
+    </div>
+    <div class="actions">
+        @if (ViewData["PrimaryActionText"] is not null)
+        {
+            <a class="btn-primary" href="@(ViewData["PrimaryActionUrl"] ?? "#")">
+                @if (ViewData["PrimaryActionIcon"] is not null)
+                {
+                    <i class="@ViewData["PrimaryActionIcon"]"></i>
+                }
+                @ViewData["PrimaryActionText"]
+            </a>
+        }
+        <button class="btn-icon"><i class="fa-regular fa-bell"></i><span class="badge">5</span></button>
+        <div class="user-profile">
+            <div class="avatar">BK</div>
+        </div>
+    </div>
+</header>

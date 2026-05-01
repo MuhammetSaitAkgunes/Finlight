@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Tahsilat";
+    ViewData["ActiveNav"] = "Collections";
+    ViewData["PageKicker"] = "Accounts receivable";
+    ViewData["PageTitle"] = "Tahsilat Merkezi";
+    ViewData["PageDescription"] = "Geciken alacakları, ödeme sözlerini ve müşteri bazlı tahsilat riskini tek yerden yönet.";
+    ViewData["PrimaryActionText"] = "Tahsilat planı oluştur";
+    ViewData["PrimaryActionIcon"] = "fa-solid fa-plus";
+}
+
+<partial name="_PageHeader" />
+
+<div class="kpi-grid">
+    <div class="card kpi-card"><div class="kpi-header"><span class="kpi-title">Toplam Alacak</span><i class="fa-solid fa-wallet text-blue"></i></div><div class="kpi-value">₺84.200</div><div class="kpi-sub text-muted">12 açık kayıt</div></div>
+    <div class="card kpi-card"><div class="kpi-header"><span class="kpi-title">Vadesi Geçen</span><i class="fa-solid fa-triangle-exclamation text-red"></i></div><div class="kpi-value">₺24.500</div><div class="kpi-change text-red">3 cari takipte</div></div>
+    <div class="card kpi-card"><div class="kpi-header"><span class="kpi-title">Ödeme Sözü</span><i class="fa-solid fa-handshake text-green"></i></div><div class="kpi-value">₺36.000</div><div class="kpi-sub text-muted">Bu hafta bekleniyor</div></div>
+    <div class="card kpi-card ai-card"><div class="kpi-header"><span class="kpi-title">Tahsilat Skoru</span><i class="fa-solid fa-wand-magic-sparkles text-purple"></i></div><div class="kpi-value">74<span class="text-sm">/100</span></div><div class="kpi-change text-purple">2 aksiyon önerisi</div></div>
+</div>
+
+<section class="card table-card">
+    <div class="card-header">
+        <div>
+            <h3>Akıllı Tahsilat Playbook'u</h3>
+            <p class="section-note">Her cari için sıradaki en iyi aksiyon. Controller ileride bu listeyi Application query sonucuyla dolduracak.</p>
+        </div>
+        <span class="status warning">Demo otomasyon</span>
+    </div>
+    <div class="playbook-grid">
+        <article class="playbook-card danger">
+            <div class="playbook-head"><span class="module-icon red"><i class="fa-solid fa-phone"></i></span><div><strong>Atlas Lojistik A.Ş.</strong><small>₺12.500 · 5 gün gecikti · yüksek risk</small></div></div>
+            <ol class="action-sequence">
+                <li class="done">Vade öncesi e-posta gönderildi</li>
+                <li class="done">SMS hatırlatma gönderildi</li>
+                <li class="active">Bugün telefonla ödeme sözü al</li>
+                <li>3 gün içinde ödeme planı öner</li>
+            </ol>
+            <button class="btn-primary"><i class="fa-solid fa-phone"></i> Arama aksiyonunu başlat</button>
+        </article>
+        <article class="playbook-card">
+            <div class="playbook-head"><span class="module-icon green"><i class="fa-solid fa-handshake"></i></span><div><strong>Nova Reklam</strong><small>₺18.000 · yarın ödeme sözü · takipte</small></div></div>
+            <ol class="action-sequence">
+                <li class="done">Ödeme sözü kaydedildi</li>
+                <li class="active">Yarın sabah kibar hatırlatma gönder</li>
+                <li>Ödeme gelmezse yeni tarih iste</li>
+            </ol>
+            <button class="btn-outline"><i class="fa-solid fa-paper-plane"></i> Hatırlatma taslağı hazırla</button>
+        </article>
+        <article class="playbook-card">
+            <div class="playbook-head"><span class="module-icon blue"><i class="fa-solid fa-percent"></i></span><div><strong>Teknoloji Marketim</strong><small>₺45.000 · düzenli ödeme · düşük risk</small></div></div>
+            <ol class="action-sequence">
+                <li class="active">Erken ödeme için %1 indirim öner</li>
+                <li>Vade politikasını 30 günde tut</li>
+            </ol>
+            <button class="btn-outline"><i class="fa-solid fa-wand-magic-sparkles"></i> Teklif metni öner</button>
+        </article>
+    </div>
+</section>

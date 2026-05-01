@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlight - Evrak & Uyum</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finlight<span class="dot">.</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="tahsilat.html"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilat</a>
+                <a href="nakit_takvimi.html"><i class="fa-solid fa-calendar-days"></i> Nakit Takvimi</a>
+                <a href="gelirgider.html"><i class="fa-solid fa-wallet"></i> Gelir & Gider</a>
+                <a href="cariler.html"><i class="fa-solid fa-users"></i> Cariler</a>
+                <a href="evrak_uyum.html"><i class="fa-solid fa-file-shield"></i> Evrak & Uyum</a>
+                <a href="ai.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Finlight AI</a>
+                <a href="ayarlar.html"><i class="fa-solid fa-gear"></i> Ayarlar</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn-primary-outline"><i class="fa-solid fa-upload"></i> Evrak Yükle</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <span class="page-kicker">Demo e-belge farkındalığı</span>
+                    <h1>Evrak & Uyum</h1>
+                    <p>Fatura, dekont, sözleşme ve e-belge durumlarını gerçek entegrasyon olmadan takip et.</p>
+                </div>
+                <button class="btn-primary"><i class="fa-solid fa-file-circle-plus"></i> Evrak ekle</button>
+            </header>
+
+            <div class="kpi-grid">
+                <div class="card kpi-card">
+                    <div class="kpi-header"><span class="kpi-title">Eksik Evrak</span><i class="fa-solid fa-folder-open text-red"></i></div>
+                    <div class="kpi-value">4</div>
+                    <div class="kpi-change text-red">2 kritik işlem</div>
+                </div>
+                <div class="card kpi-card">
+                    <div class="kpi-header"><span class="kpi-title">e-Arşiv Taslak</span><i class="fa-solid fa-file-invoice text-blue"></i></div>
+                    <div class="kpi-value">3</div>
+                    <div class="kpi-sub text-muted">Demo statü</div>
+                </div>
+                <div class="card kpi-card">
+                    <div class="kpi-header"><span class="kpi-title">Onay Bekleyen</span><i class="fa-solid fa-clock text-purple"></i></div>
+                    <div class="kpi-value">6</div>
+                    <div class="kpi-sub text-muted">Muhasebe kontrolü</div>
+                </div>
+                <div class="card kpi-card ai-card">
+                    <div class="kpi-header"><span class="kpi-title">Uyum Skoru</span><i class="fa-solid fa-shield-halved text-purple"></i></div>
+                    <div class="kpi-value">88<span class="text-sm">/100</span></div>
+                    <div class="kpi-change text-purple">İyi seviyede</div>
+                </div>
+            </div>
+
+            <section class="card table-card" id="muhasebeci-paketi">
+                <div class="card-header">
+                    <div>
+                        <h3>Muhasebeci Paketi</h3>
+                        <p class="section-note">Ay sonu kapanışı için gelir-gider, banka hareketi, açık cari ve eksik evrakları tek pakette hazırlar.</p>
+                    </div>
+                    <button class="btn-primary"><i class="fa-solid fa-file-export"></i> Demo paketi üret</button>
+                </div>
+                <div class="accountant-pack-grid">
+                    <div class="pack-item done"><i class="fa-solid fa-check"></i><strong>Gelir-gider özeti</strong><span>Hazır · 42 işlem</span></div>
+                    <div class="pack-item warning"><i class="fa-solid fa-building-columns"></i><strong>Banka hareketleri</strong><span>4 hareket belge bekliyor</span></div>
+                    <div class="pack-item danger"><i class="fa-solid fa-folder-open"></i><strong>Eksik belgeler</strong><span>2 kritik dekont eksik</span></div>
+                    <div class="pack-item"><i class="fa-solid fa-users"></i><strong>Açık cariler</strong><span>3 riskli cari notlandı</span></div>
+                </div>
+            </section>
+
+            <div class="grid-2-1">
+                <section class="card table-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Vergi / Uyum Takvimi</h3>
+                            <p class="section-note">Gerçek GİB entegrasyonu yok; KOBİ sahibine mevzuat işlerini kaçırmama yüzeyi sağlar.</p>
+                        </div>
+                        <span class="status info">Demo takip</span>
+                    </div>
+                    <div class="compliance-timeline">
+                        <div class="compliance-step danger">
+                            <span>12 Ara</span>
+                            <strong>KDV ödeme belgesi</strong>
+                            <small>Dekont ödeme işlemine bağlanmalı</small>
+                        </div>
+                        <div class="compliance-step warning">
+                            <span>15 Ara</span>
+                            <strong>e-Arşiv taslak kontrolü</strong>
+                            <small>Nova Reklam faturası muhasebe onayı bekliyor</small>
+                        </div>
+                        <div class="compliance-step">
+                            <span>31 Ara</span>
+                            <strong>e-Defter hazırlık kontrolü</strong>
+                            <small>Berat ve muhasebe fişi notları için demo hatırlatma</small>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="card insight-card">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-shield-halved"></i> Risk & finansman hazırlığı</h3>
+                    </div>
+                    <div class="approval-list">
+                        <div class="approval-item danger">
+                            <span class="module-icon red"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                            <div>
+                                <strong>Şüpheli ödeme kontrolü</strong>
+                                <small>Tedarikçi IBAN değişikliği ödeme öncesi doğrulansın.</small>
+                            </div>
+                        </div>
+                        <div class="approval-item">
+                            <span class="module-icon green"><i class="fa-solid fa-chart-line"></i></span>
+                            <div>
+                                <strong>Kredi/faktoring hazırlık skoru: 78</strong>
+                                <small>Açık fatura ve nakit projeksiyonu hazır; 2 belge eksik.</small>
+                            </div>
+                        </div>
+                        <div class="approval-item warning">
+                            <span class="module-icon blue"><i class="fa-solid fa-percent"></i></span>
+                            <div>
+                                <strong>Kâr marjı sinyali</strong>
+                                <small>Altyapı giderleri 2 ayda %18 arttı; abonelikler incelensin.</small>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="grid-2-1">
+                <section class="card table-card">
+                    <div class="card-header">
+                        <h3>Belge Kontrol Listesi</h3>
+                        <a href="gelirgider.html" class="view-all">İşleme bağla</a>
+                    </div>
+                    <div class="document-grid">
+                        <div class="document-card danger">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <strong>ABC Lojistik ödeme dekontu</strong>
+                            <span>Eksik · ödeme öncesi gerekli</span>
+                        </div>
+                        <div class="document-card warning">
+                            <i class="fa-solid fa-file-invoice"></i>
+                            <strong>Nova Reklam e-Arşiv taslağı</strong>
+                            <span>Kontrol bekliyor</span>
+                        </div>
+                        <div class="document-card">
+                            <i class="fa-solid fa-file-contract"></i>
+                            <strong>Teknoloji Marketim sözleşme</strong>
+                            <span>Geçerli · 2026 yenileme</span>
+                        </div>
+                        <div class="document-card">
+                            <i class="fa-solid fa-receipt"></i>
+                            <strong>AWS EMEA fatura</strong>
+                            <span>Kategori eşleşti</span>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="card insight-card">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-circle-info"></i> Uyum notu</h3>
+                    </div>
+                    <div class="insight-content">
+                        <div class="insight-item">
+                            <div class="tag warning">MVP sınırı</div>
+                            <p>Bu sayfa gerçek GİB entegrasyonu yapmaz; e-belge farkındalığı ve operasyonel takip içindir.</p>
+                        </div>
+                        <div class="insight-item">
+                            <div class="tag success">Değer</div>
+                            <p>KOBİ sahibi hangi işlemde hangi belgenin eksik olduğunu hızlıca görebilir.</p>
+                        </div>
+                        <button class="btn-ai">Eksik evrakları sırala</button>
+                    </div>
+                </aside>
+            </div>
+
+            <section class="card table-card">
+                <div class="card-header">
+                    <h3>Yaklaşan Uyum Aksiyonları</h3>
+                    <span class="text-muted">Demo takvim</span>
+                </div>
+                <div class="table-container">
+                    <div class="table-row">
+                        <div class="col-fixed-sm">12.12</div>
+                        <div class="col-flex-2"><strong>KDV ödeme belgesi</strong><span class="row-sub">Vergi ödemesine bağlanacak</span></div>
+                        <div class="col-flex-1 text-right"><span class="status warning">Bekliyor</span></div>
+                    </div>
+                    <div class="table-row">
+                        <div class="col-fixed-sm">15.12</div>
+                        <div class="col-flex-2"><strong>e-Arşiv taslak kontrolü</strong><span class="row-sub">Nova Reklam</span></div>
+                        <div class="col-flex-1 text-right"><span class="status info">Planlandı</span></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

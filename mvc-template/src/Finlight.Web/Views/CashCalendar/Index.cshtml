@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Nakit Takvimi";
+    ViewData["ActiveNav"] = "CashCalendar";
+    ViewData["PageKicker"] = "7 / 30 / 90 gün görünümü";
+    ViewData["PageTitle"] = "Nakit Takvimi";
+    ViewData["PageDescription"] = "Gelecek para giriş-çıkışlarını ve kritik haftaları aksiyon alınabilir şekilde izle.";
+}
+
+<partial name="_PageHeader" />
+
+<section class="focus-hero">
+    <div>
+        <span class="hero-label"><i class="fa-solid fa-triangle-exclamation"></i> Senaryo uyarısı</span>
+        <h2>Atlas tahsilatı 7 gün gecikirse 12 Aralık haftasında kasa açığı oluşabilir.</h2>
+        <p>Ofis kirasını 3 gün ertelemek veya Nova Reklam tahsilatını öne çekmek açığı kapatır.</p>
+    </div>
+    <div class="hero-actions-inline">
+        <button class="btn-primary"><i class="fa-solid fa-wand-magic-sparkles"></i> AI senaryo üret</button>
+        <button class="btn-outline"><i class="fa-solid fa-file-export"></i> Raporla</button>
+    </div>
+</section>
+
+<div class="calendar-grid">
+    <div class="cash-day"><span class="day-name">Bugün</span><strong>₺452.500</strong><small>Başlangıç nakdi</small></div>
+    <div class="cash-day danger"><span class="day-name">06 Ara</span><strong>-₺12.500</strong><small>ABC Lojistik ödeme</small></div>
+    <div class="cash-day success"><span class="day-name">08 Ara</span><strong>+₺45.000</strong><small>Teknoloji Marketim</small></div>
+    <div class="cash-day danger"><span class="day-name">12 Ara</span><strong>-₺27.300</strong><small>KDV & stopaj</small></div>
+</div>

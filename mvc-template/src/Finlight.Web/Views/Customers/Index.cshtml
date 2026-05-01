@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Cariler";
+    ViewData["ActiveNav"] = "Customers";
+    ViewData["PageKicker"] = "Risk ve vade politikası";
+    ViewData["PageTitle"] = "Cariler";
+    ViewData["PageDescription"] = "Müşteri ve tedarikçileri bakiye, ödeme alışkanlığı ve risk limitiyle yönet.";
+    ViewData["PrimaryActionText"] = "Yeni cari kart";
+    ViewData["PrimaryActionIcon"] = "fa-solid fa-plus";
+}
+
+<partial name="_PageHeader" />
+
+<section class="card table-card">
+    <div class="card-header">
+        <div><h3>Cari Risk & Vade Politikası</h3><p class="section-note">Kime ne kadar açık hesap çalışılacağını ödeme alışkanlığına göre gösterir.</p></div>
+        <span class="status warning">AI destekli öneri</span>
+    </div>
+    <div class="policy-grid">
+        <article class="policy-card danger"><div class="policy-score">75</div><div><strong>Atlas Lojistik A.Ş.</strong><small>Ort. tahsilat: 47 gün · gecikme: 3 kez</small><p>Öneri: maksimum 7 gün vade. Risk limiti ₺25.000'e düşürülsün.</p></div></article>
+        <article class="policy-card"><div class="policy-score safe">12</div><div><strong>TechSoft Yazılım</strong><small>Ort. tahsilat: 9 gün · gecikme: 0</small><p>Öneri: 30 gün vade korunabilir. Erken ödeme indirimi denenebilir.</p></div></article>
+        <article class="policy-card warning"><div class="policy-score mid">40</div><div><strong>Eko Marketler Zinciri</strong><small>3 aydır işlem yok · veri güncel değil</small><p>Öneri: yeni işlem öncesi iletişim ve vergi bilgisi doğrulansın.</p></div></article>
+    </div>
+</section>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlight - Gelir & Gider</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finlight<span class="dot">.</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="tahsilat.html"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilat</a>
+                <a href="nakit_takvimi.html"><i class="fa-solid fa-calendar-days"></i> Nakit Takvimi</a>
+                <a href="gelirgider.html"><i class="fa-solid fa-wallet"></i> Gelir & Gider</a>
+                <a href="cariler.html"><i class="fa-solid fa-users"></i> Cariler</a>
+                <a href="evrak_uyum.html"><i class="fa-solid fa-file-shield"></i> Evrak & Uyum</a>
+                <a href="ai.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Finlight AI</a>
+                <a href="ayarlar.html"><i class="fa-solid fa-gear"></i> Ayarlar</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="top-bar">
+                <div class="breadcrumb">
+                    <span class="text-muted">Finans</span> <i class="fa-solid fa-chevron-right text-xs"></i> <span>Nakit
+                        Akışı</span>
+                </div>
+                <div class="actions">
+                    <button class="btn-primary" id="addTransBtn"><i class="fa-solid fa-plus"></i> İşlem Ekle</button>
+                    <div class="user-profile">
+                        <div class="avatar">BK</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="stats-strip">
+                <div class="strip-item">
+                    <div class="icon-box green"><i class="fa-solid fa-arrow-up"></i></div>
+                    <div>
+                        <div class="strip-label">Aylık Gelir</div>
+                        <div class="strip-value text-green">₺124,500</div>
+                    </div>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="icon-box red"><i class="fa-solid fa-arrow-down"></i></div>
+                    <div>
+                        <div class="strip-label">Aylık Gider</div>
+                        <div class="strip-value text-red">₺84,200</div>
+                    </div>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="icon-box blue"><i class="fa-solid fa-wallet"></i></div>
+                    <div>
+                        <div class="strip-label">Net Kâr</div>
+                        <div class="strip-value text-blue">+₺40,300</div>
+                    </div>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="icon-box purple"><i class="fa-solid fa-percent"></i></div>
+                    <div>
+                        <div class="strip-label">Kâr Marjı</div>
+                        <div class="strip-value">32% <small class="text-muted">(Güçlü)</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2-1" id="mutabakat">
+                <section class="card table-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Banka Hareketi / Mutabakat Çalışma Alanı</h3>
+                            <p class="section-note">Gerçek banka bağlantısı yok; CSV/demo hareketleriyle Excel mutabakat yükünü azaltan akış.</p>
+                        </div>
+                        <button class="btn-outline"><i class="fa-solid fa-file-csv"></i> CSV içe aktar</button>
+                    </div>
+                    <div class="recon-summary">
+                        <div><strong>18</strong><span>Eşleşen</span></div>
+                        <div><strong>4</strong><span>Belge eksik</span></div>
+                        <div><strong>2</strong><span>Şüpheli</span></div>
+                    </div>
+                    <div class="table-container compact-table">
+                        <div class="table-row">
+                            <div class="col-flex-2"><strong>Garanti POS Tahsilatı</strong><span class="row-sub">Banka hareketi · 08 Ara</span></div>
+                            <div class="col-flex-1 text-right amount-green">+₺45.000</div>
+                            <div class="col-flex-1 text-right"><span class="status success">Cariyle eşleşti</span></div>
+                        </div>
+                        <div class="table-row">
+                            <div class="col-flex-2"><strong>AWS EMEA</strong><span class="row-sub">Kredi kartı · açıklama otomatik okundu</span></div>
+                            <div class="col-flex-1 text-right amount-red">-₺1.200</div>
+                            <div class="col-flex-1 text-right"><span class="status warning">Belge eksik</span></div>
+                        </div>
+                        <div class="table-row">
+                            <div class="col-flex-2"><strong>IBAN değişikliği bildirimi</strong><span class="row-sub">Tedarikçi hesabı önceki kayıttan farklı</span></div>
+                            <div class="col-flex-1 text-right amount-red">-₺27.300</div>
+                            <div class="col-flex-1 text-right"><span class="status danger">Şüpheli</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="card insight-card" id="onay-merkezi">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-stamp"></i> Fatura & Ödeme Onay Merkezi</h3>
+                    </div>
+                    <div class="approval-list">
+                        <div class="approval-item danger">
+                            <span class="module-icon red"><i class="fa-solid fa-copy"></i></span>
+                            <div>
+                                <strong>Mükerrer fatura şüphesi</strong>
+                                <small>ABC Lojistik · aynı tutar ve aynı vade</small>
+                            </div>
+                        </div>
+                        <div class="approval-item warning">
+                            <span class="module-icon blue"><i class="fa-solid fa-scale-balanced"></i></span>
+                            <div>
+                                <strong>Tutar farkı</strong>
+                                <small>PO: ₺18.000 · Fatura: ₺18.750</small>
+                            </div>
+                        </div>
+                        <div class="approval-item">
+                            <span class="module-icon purple"><i class="fa-solid fa-user-check"></i></span>
+                            <div>
+                                <strong>Onay bekleyen ödeme</strong>
+                                <small>KDV & stopaj · 12 Ara · finans kontrolü</small>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-ai">Riskleri sırala</button>
+                </aside>
+            </div>
+
+            <div class="grid-2-1">
+                <div class="card chart-card">
+                    <div class="card-header">
+                        <h3>Gelir vs Gider (6 Ay)</h3>
+                        <div class="select-wrapper" style="width: 120px;">
+                            <select style="height: 35px; padding: 5px 10px; font-size: 12px;">
+                                <option>Bu Yıl</option>
+                                <option>Geçen Yıl</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card chart-card">
+                    <div class="card-header">
+                        <h3>Gider Dağılımı</h3>
+                    </div>
+                    <div class="chart-wrapper" style="position: relative; display: flex; justify-content: center;">
+                        <canvas id="categoryChart"></canvas>
+                        <div
+                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                            <span style="font-size: 24px; font-weight: 700; display: block;">%45</span>
+                            <span class="text-muted" style="font-size: 12px;">Personel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toolbar">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="İşlem açıklaması veya kategori ara...">
+                </div>
+                <div class="filter-group">
+                    <div class="select-wrapper">
+                        <select>
+                            <option>Tüm Kategoriler</option>
+                            <option>Satış</option>
+                            <option>Maaş</option>
+                            <option>Kira/Ofis</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="select-wrapper">
+                        <select>
+                            <option>Tarih: Bu Ay</option>
+                            <option>Geçen Ay</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <button class="btn-icon-square"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header-row">
+                    <div class="col-fixed-xs">Tip</div>
+                    <div class="col-flex-2">Açıklama / Kategori</div>
+                    <div class="col-flex-1">Tarih</div>
+                    <div class="col-flex-1 text-right">Tutar</div>
+                    <div class="col-action">Belge</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-fixed-xs">
+                        <div class="icon-box green" style="width: 32px; height: 32px; font-size: 12px;"><i
+                                class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="col-flex-2">
+                        <div>
+                            <div class="row-title">Web Sitesi Tasarımı</div>
+                            <div class="row-sub">Kategori: <span class="text-green">Hizmet Satışı</span></div>
+                        </div>
+                    </div>
+                    <div class="col-flex-1">
+                        <div class="contact-person">06 Ara 2025</div>
+                        <div class="row-sub">14:30</div>
+                    </div>
+                    <div class="col-flex-1 text-right">
+                        <div class="amount positive">+₺25,000</div>
+                        <div class="row-sub"><span class="badge-tag">Tahsil Edildi</span></div>
+                    </div>
+                    <div class="col-action">
+                        <button class="btn-dots"><i class="fa-solid fa-file-invoice"></i></button>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-fixed-xs">
+                        <div class="icon-box red" style="width: 32px; height: 32px; font-size: 12px;"><i
+                                class="fa-solid fa-arrow-up"></i></div>
+                    </div>
+                    <div class="col-flex-2">
+                        <div>
+                            <div class="row-title">AWS Sunucu Faturası</div>
+                            <div class="row-sub">Kategori: <span class="text-red">Altyapı</span></div>
+                        </div>
+                    </div>
+                    <div class="col-flex-1">
+                        <div class="contact-person">05 Ara 2025</div>
+                        <div class="row-sub">Otomatik</div>
+                    </div>
+                    <div class="col-flex-1 text-right">
+                        <div class="amount negative">-₺1,200</div>
+                        <div class="row-sub"><span class="badge-tag">Kredi Kartı</span></div>
+                    </div>
+                    <div class="col-action">
+                        <button class="btn-dots"><i class="fa-solid fa-file-pdf"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="addTransModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Yeni İşlem Ekle</h3>
+                <button class="btn-close" id="closeTransModal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="addTransForm">
+                    <div class="form-group full">
+                        <label>İşlem Türü</label>
+                        <div class="segment-control">
+                            <input type="radio" name="transType" id="typeIncome" value="income" checked>
+                            <label for="typeIncome">Gelir (Tahsilat)</label>
+
+                            <input type="radio" name="transType" id="typeExpense" value="expense">
+                            <label for="typeExpense">Gider (Harcama)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Tutar (₺)</label>
+                            <input type="text" id="inputAmount" placeholder="0.00">
+                        </div>
+                        <div class="form-group">
+                            <label>Tarih</label>
+                            <input type="date">
+                        </div>
+                    </div>
+
+                    <div class="form-group full">
+                        <label>Açıklama</label>
+                        <input type="text" id="inputDesc" placeholder="Örn: Web tasarım hizmet bedeli">
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Kategori</label>
+                            <select id="inputCategory">
+                                <option>Satış / Hizmet</option>
+                                <option>Maaş / Personel</option>
+                                <option>Kira / Ofis</option>
+                                <option>Altyapı / Sunucu</option>
+                                <option>Vergi / Stopaj</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Cari / Firma (Opsiyonel)</label>
+                            <select>
+                                <option>Seçiniz...</option>
+                                <option>ABC Holding</option>
+                                <option>Amazon AWS</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-outline" id="cancelTransModal">İptal</button>
+                <button type="submit" form="addTransForm" class="btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

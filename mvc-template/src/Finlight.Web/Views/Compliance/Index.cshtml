@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Evrak & Uyum";
+    ViewData["ActiveNav"] = "Compliance";
+    ViewData["PageKicker"] = "Demo e-belge farkındalığı";
+    ViewData["PageTitle"] = "Evrak & Uyum";
+    ViewData["PageDescription"] = "Fatura, dekont, sözleşme ve e-belge durumlarını gerçek entegrasyon olmadan takip et.";
+    ViewData["PrimaryActionText"] = "Evrak ekle";
+    ViewData["PrimaryActionIcon"] = "fa-solid fa-file-circle-plus";
+}
+
+<partial name="_PageHeader" />
+
+<section class="card table-card" id="muhasebeci-paketi">
+    <div class="card-header">
+        <div><h3>Muhasebeci Paketi</h3><p class="section-note">Ay sonu kapanışı için gelir-gider, banka hareketi, açık cari ve eksik evrakları tek pakette hazırlar.</p></div>
+        <button class="btn-primary"><i class="fa-solid fa-file-export"></i> Demo paketi üret</button>
+    </div>
+    <div class="accountant-pack-grid">
+        <div class="pack-item done"><i class="fa-solid fa-check"></i><strong>Gelir-gider özeti</strong><span>Hazır · 42 işlem</span></div>
+        <div class="pack-item warning"><i class="fa-solid fa-building-columns"></i><strong>Banka hareketleri</strong><span>4 hareket belge bekliyor</span></div>
+        <div class="pack-item danger"><i class="fa-solid fa-folder-open"></i><strong>Eksik belgeler</strong><span>2 kritik dekont eksik</span></div>
+        <div class="pack-item"><i class="fa-solid fa-users"></i><strong>Açık cariler</strong><span>3 riskli cari notlandı</span></div>
+    </div>
+</section>
+
+<div class="grid-2-1">
+    <section class="card table-card">
+        <div class="card-header"><div><h3>Vergi / Uyum Takvimi</h3><p class="section-note">Gerçek GİB entegrasyonu yok; mevzuat işlerini kaçırmama yüzeyi sağlar.</p></div><span class="status info">Demo takip</span></div>
+        <div class="compliance-timeline">
+            <div class="compliance-step danger"><span>12 Ara</span><strong>KDV ödeme belgesi</strong><small>Dekont ödeme işlemine bağlanmalı</small></div>
+            <div class="compliance-step warning"><span>15 Ara</span><strong>e-Arşiv taslak kontrolü</strong><small>Nova Reklam faturası muhasebe onayı bekliyor</small></div>
+            <div class="compliance-step"><span>31 Ara</span><strong>e-Defter hazırlık kontrolü</strong><small>Berat ve muhasebe fişi notları için demo hatırlatma</small></div>
+        </div>
+    </section>
+    <aside class="card insight-card">
+        <div class="card-header"><h3><i class="fa-solid fa-shield-halved"></i> Risk & finansman hazırlığı</h3></div>
+        <div class="approval-list">
+            <div class="approval-item danger"><span class="module-icon red"><i class="fa-solid fa-triangle-exclamation"></i></span><div><strong>Şüpheli ödeme kontrolü</strong><small>Tedarikçi IBAN değişikliği ödeme öncesi doğrulansın.</small></div></div>
+            <div class="approval-item"><span class="module-icon green"><i class="fa-solid fa-chart-line"></i></span><div><strong>Kredi/faktoring hazırlık skoru: 78</strong><small>Açık fatura ve nakit projeksiyonu hazır; 2 belge eksik.</small></div></div>
+        </div>
+    </aside>
+</div>

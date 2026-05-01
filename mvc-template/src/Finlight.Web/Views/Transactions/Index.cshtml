@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Gelir & Gider";
+    ViewData["ActiveNav"] = "Transactions";
+    ViewData["PageKicker"] = "Finans operasyonları";
+    ViewData["PageTitle"] = "Gelir & Gider";
+    ViewData["PageDescription"] = "İşlem kayıtları, mutabakat durumu, belge ve ödeme onayları.";
+    ViewData["PrimaryActionText"] = "İşlem ekle";
+    ViewData["PrimaryActionIcon"] = "fa-solid fa-plus";
+}
+
+<partial name="_PageHeader" />
+
+<div class="grid-2-1" id="mutabakat">
+    <section class="card table-card">
+        <div class="card-header">
+            <div><h3>Banka Hareketi / Mutabakat Çalışma Alanı</h3><p class="section-note">CSV/demo banka hareketleriyle Excel mutabakat yükünü azaltan akış.</p></div>
+            <button class="btn-outline"><i class="fa-solid fa-file-csv"></i> CSV içe aktar</button>
+        </div>
+        <div class="recon-summary">
+            <div><strong>18</strong><span>Eşleşen</span></div>
+            <div><strong>4</strong><span>Belge eksik</span></div>
+            <div><strong>2</strong><span>Şüpheli</span></div>
+        </div>
+        <div class="table-container compact-table">
+            <div class="table-row"><div class="col-flex-2"><strong>Garanti POS Tahsilatı</strong><span class="row-sub">Banka hareketi · 08 Ara</span></div><div class="col-flex-1 text-right amount-green">+₺45.000</div><div class="col-flex-1 text-right"><span class="status success">Cariyle eşleşti</span></div></div>
+            <div class="table-row"><div class="col-flex-2"><strong>AWS EMEA</strong><span class="row-sub">Kredi kartı · açıklama otomatik okundu</span></div><div class="col-flex-1 text-right amount-red">-₺1.200</div><div class="col-flex-1 text-right"><span class="status warning">Belge eksik</span></div></div>
+        </div>
+    </section>
+
+    <aside class="card insight-card" id="onay-merkezi">
+        <div class="card-header"><h3><i class="fa-solid fa-stamp"></i> Fatura & Ödeme Onay Merkezi</h3></div>
+        <div class="approval-list">
+            <div class="approval-item danger"><span class="module-icon red"><i class="fa-solid fa-copy"></i></span><div><strong>Mükerrer fatura şüphesi</strong><small>ABC Lojistik · aynı tutar ve aynı vade</small></div></div>
+            <div class="approval-item warning"><span class="module-icon blue"><i class="fa-solid fa-scale-balanced"></i></span><div><strong>Tutar farkı</strong><small>PO: ₺18.000 · Fatura: ₺18.750</small></div></div>
+        </div>
+        <button class="btn-ai">Riskleri sırala</button>
+    </aside>
+</div>

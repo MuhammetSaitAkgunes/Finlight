@@ -1,0 +1,99 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    ViewData["ActiveNav"] = "Dashboard";
+    ViewData["PageKicker"] = "Bugünün finans aksiyonları";
+    ViewData["PageTitle"] = "Merhaba, Burak";
+    ViewData["PageDescription"] = "Para nerede, ne zaman gelecek, ne zaman çıkacak ve bugün hangi cari riskli?";
+}
+
+<partial name="_PageHeader" />
+
+<section class="focus-hero">
+    <div>
+        <span class="hero-label"><i class="fa-solid fa-circle-info"></i> Kritik hafta</span>
+        <h2>Önümüzdeki 7 günde nakit tamponu ₺41.700 seviyesine düşebilir.</h2>
+        <p>Atlas Lojistik tahsilatı gecikirse ödeme planını yeniden dengelemen gerekir.</p>
+    </div>
+    <div class="hero-actions-inline">
+        <a asp-controller="Collections" asp-action="Index" class="btn-primary"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilata git</a>
+        <a asp-controller="CashCalendar" asp-action="Index" class="btn-outline"><i class="fa-solid fa-calendar-days"></i> Takvimi aç</a>
+    </div>
+</section>
+
+<section class="value-module-grid">
+    <a asp-controller="Collections" asp-action="Index" class="value-module-card">
+        <span class="module-icon green"><i class="fa-solid fa-route"></i></span>
+        <strong>Akıllı Tahsilat Playbook'u</strong>
+        <small>Geciken her cari için sıradaki en iyi aksiyon.</small>
+    </a>
+    <a asp-controller="Transactions" asp-action="Index" asp-fragment="mutabakat" class="value-module-card">
+        <span class="module-icon blue"><i class="fa-solid fa-building-columns"></i></span>
+        <strong>Banka Mutabakatı</strong>
+        <small>Demo banka hareketlerini belge, cari ve işlem kayıtlarıyla eşleştir.</small>
+    </a>
+    <a asp-controller="Transactions" asp-action="Index" asp-fragment="onay-merkezi" class="value-module-card">
+        <span class="module-icon red"><i class="fa-solid fa-stamp"></i></span>
+        <strong>Fatura & Ödeme Onayı</strong>
+        <small>Mükerrer fatura, tutar farkı ve eksik belge uyarıları.</small>
+    </a>
+    <a asp-controller="Compliance" asp-action="Index" asp-fragment="muhasebeci-paketi" class="value-module-card">
+        <span class="module-icon purple"><i class="fa-solid fa-box-archive"></i></span>
+        <strong>Muhasebeci Paketi</strong>
+        <small>Ay sonu finans paketini muhasebeciye hazırla.</small>
+    </a>
+</section>
+
+<div class="kpi-grid">
+    <div class="card kpi-card">
+        <div class="kpi-header"><span class="kpi-title">Net Nakit</span><i class="fa-solid fa-vault text-blue"></i></div>
+        <div class="kpi-value">₺452.500</div>
+        <div class="kpi-change positive">+%5,2 geçen aya göre</div>
+    </div>
+    <div class="card kpi-card">
+        <div class="kpi-header"><span class="kpi-title">Bekleyen Tahsilat</span><i class="fa-solid fa-hand-holding-dollar text-green"></i></div>
+        <div class="kpi-value">₺84.200</div>
+        <div class="kpi-sub text-muted">₺24.500 vadesi geçmiş</div>
+    </div>
+    <div class="card kpi-card">
+        <div class="kpi-header"><span class="kpi-title">Yaklaşan Ödeme</span><i class="fa-solid fa-file-invoice-dollar text-red"></i></div>
+        <div class="kpi-value">₺32.150</div>
+        <div class="kpi-sub text-muted">Bu hafta 4 ödeme</div>
+    </div>
+    <div class="card kpi-card ai-card">
+        <div class="kpi-header"><span class="kpi-title">Finansal Sağlık</span><i class="fa-solid fa-heart-pulse text-purple"></i></div>
+        <div class="kpi-value">82<span class="text-sm">/100</span></div>
+        <div class="kpi-change text-purple">Aksiyon gerekli</div>
+    </div>
+</div>
+
+<div class="ops-grid">
+    <section class="card chart-card">
+        <div class="card-header">
+            <h3>Nakit Akışı & Tahmin</h3>
+            <div class="legend">
+                <span class="dot-income"></span> Gelir
+                <span class="dot-expense"></span> Gider
+                <span class="dot-ai"></span> Tahmin
+            </div>
+        </div>
+        <div class="chart-wrapper">
+            <canvas id="cashFlowChart"></canvas>
+        </div>
+    </section>
+
+    <section class="card action-card">
+        <div class="card-header"><h3><i class="fa-solid fa-list-check"></i> Bugün yapılacaklar</h3></div>
+        <div class="action-stack">
+            <a asp-controller="Collections" asp-action="Index" class="action-item priority-high">
+                <span class="action-icon"><i class="fa-solid fa-phone"></i></span>
+                <span><strong>Atlas Lojistik'i ara</strong><small>₺12.500 tahsilat 5 gün gecikti.</small></span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+            <a asp-controller="CashCalendar" asp-action="Index" class="action-item">
+                <span class="action-icon purple"><i class="fa-solid fa-sliders"></i></span>
+                <span><strong>Ödeme planını dengele</strong><small>KDV ve kira aynı haftaya yığılıyor.</small></span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+    </section>
+</div>

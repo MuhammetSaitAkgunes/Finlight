@@ -1,0 +1,26 @@
+@{
+    Layout = "_AuthLayout";
+    ViewData["Title"] = "Kayıt Ol";
+}
+
+<main class="auth-shell">
+    <section class="auth-panel">
+        <a asp-controller="Auth" asp-action="SignIn" class="auth-brand" aria-label="Finlight">
+            <span class="brand-mark"><i class="fa-solid fa-chart-line"></i></span>
+            <span>Finlight<span class="dot">.</span></span>
+        </a>
+        <div class="auth-card">
+            <div class="eyebrow"><i class="fa-solid fa-building-shield"></i> Demo çalışma alanı</div>
+            <h1 class="auth-title">Finans kontrolünü başlat.</h1>
+            <p class="auth-copy">Test verileriyle çalışan bir şirket alanı oluştur ve dashboard deneyimini incele.</p>
+            <form class="auth-form" asp-controller="Auth" asp-action="SignUp" method="post">
+                @Html.AntiForgeryToken()
+                <div class="field-group"><label for="name">Ad soyad</label><div class="input-wrap"><i class="fa-regular fa-user"></i><input id="name" name="FullName" type="text" value="Burak Kaya" required /></div></div>
+                <div class="field-group"><label for="company">Şirket adı</label><div class="input-wrap"><i class="fa-regular fa-building"></i><input id="company" name="CompanyName" type="text" value="Finlight Demo Ltd." required /></div></div>
+                <div class="field-group"><label for="email">E-posta</label><div class="input-wrap"><i class="fa-regular fa-envelope"></i><input id="email" name="Email" type="email" value="burak@finlight.demo" required /></div></div>
+                <button type="submit" class="btn-primary">Demo alanını aç <i class="fa-solid fa-arrow-right"></i></button>
+                <p class="auth-switch">Zaten hesabın var mı? <a asp-controller="Auth" asp-action="SignIn">Giriş yap</a></p>
+            </form>
+        </div>
+    </section>
+</main>

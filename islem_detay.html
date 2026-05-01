@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlight - İşlem Detayı</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finlight<span class="dot">.</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="tahsilat.html"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilat</a>
+                <a href="nakit_takvimi.html"><i class="fa-solid fa-calendar-days"></i> Nakit Takvimi</a>
+                <a href="gelirgider.html"><i class="fa-solid fa-wallet"></i> Gelir & Gider</a>
+                <a href="cariler.html"><i class="fa-solid fa-users"></i> Cariler</a>
+                <a href="evrak_uyum.html"><i class="fa-solid fa-file-shield"></i> Evrak & Uyum</a>
+                <a href="ai.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Finlight AI</a>
+                <a href="ayarlar.html"><i class="fa-solid fa-gear"></i> Ayarlar</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="top-bar">
+                <div class="breadcrumb">
+                    <a href="gelirgider.html" class="text-muted" style="text-decoration:none;">Gelir & Gider</a>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <span>İşlem #TRX-8942</span>
+                </div>
+                <div class="actions">
+                    <button class="btn-outline"><i class="fa-solid fa-print"></i> Yazdır</button>
+                    <button class="btn-primary"><i class="fa-solid fa-pen"></i> Düzenle</button>
+                    <div class="user-profile">
+                        <div class="avatar">BK</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-header"
+                style="border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 30px;">
+                <div class="header-left">
+                    <div style="display:flex; align-items:center; gap: 15px;">
+                        <div class="icon-box red" style="width: 50px; height: 50px; font-size: 20px;"><i
+                                class="fa-solid fa-server"></i></div>
+                        <div>
+                            <h2 style="font-size: 20px; margin-bottom: 5px;">AWS Sunucu Faturası</h2>
+                            <p class="text-muted">Amazon Ireland Ltd. • <span class="badge-tag">Altyapı</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right" style="text-align: right;">
+                    <div class="amount negative" style="font-size: 28px;">-₺1,200.00</div>
+                    <div class="text-muted" style="font-size: 13px;">KDV Dahil (%18)</div>
+                </div>
+            </div>
+
+            <div class="grid-2-1">
+                <div class="detail-column">
+
+                    <div class="card" style="margin-bottom: 24px;">
+                        <h3
+                            style="font-size: 16px; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
+                            İşlem Bilgileri</h3>
+
+                        <div class="detail-row">
+                            <span class="detail-label">İşlem Tarihi</span>
+                            <span class="detail-value">05 Aralık 2025 - 14:30</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Ödeme Yöntemi</span>
+                            <span class="detail-value"><i class="fa-brands fa-cc-mastercard"></i> Kurumsal Kart ****
+                                4242</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Durum</span>
+                            <span class="badge-tag success"
+                                style="background: rgba(16, 185, 129, 0.15); color: #10B981;">Ödeme Tamamlandı</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Referans No</span>
+                            <span class="detail-value" style="font-family: monospace;">INV-2025-00124</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Açıklama</span>
+                            <span class="detail-value" style="max-width: 300px; text-align: right;">Kasım 2025 dönemi
+                                sunucu kullanım ve barındırma bedeli.</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h3 style="font-size: 16px;">Ekli Belgeler (1)</h3>
+                            <button class="btn-sm-outline"><i class="fa-solid fa-upload"></i> Yeni Yükle</button>
+                        </div>
+
+                        <div class="file-preview">
+                            <div class="file-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                            <div class="file-info">
+                                <div class="file-name">AWS_Invoice_Nov25.pdf</div>
+                                <div class="file-meta">1.2 MB • Yüklendi: 05 Ara 2025</div>
+                            </div>
+                            <button class="btn-icon-square" style="width: 35px; height: 35px;"><i
+                                    class="fa-solid fa-download"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="context-column">
+
+                    <div class="card" style="margin-bottom: 24px;">
+                        <h3 style="font-size: 16px; margin-bottom: 15px;">İlgili Cari</h3>
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                            <div class="avatar-sq orange">AM</div>
+                            <div>
+                                <div style="font-weight: 600;">Amazon Ireland</div>
+                                <div class="text-muted" style="font-size: 12px;">Tedarikçi • Dublin</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn-primary-outline" style="font-size: 13px; padding: 8px;"><i
+                                    class="fa-solid fa-user"></i> Profile Git</button>
+                            <button class="btn-primary-outline" style="font-size: 13px; padding: 8px;"><i
+                                    class="fa-solid fa-envelope"></i> Mail At</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="font-size: 16px; margin-bottom: 20px;">İşlem Tarihçesi</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot success"></div>
+                                <div class="timeline-content">
+                                    <div class="time">05 Ara • 14:32</div>
+                                    <div class="event">Ödeme Başarılı</div>
+                                    <div class="desc">Banka onayı alındı.</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot primary"></div>
+                                <div class="timeline-content">
+                                    <div class="time">05 Ara • 09:00</div>
+                                    <div class="event">Fatura İşlendi</div>
+                                    <div class="desc">Sistem tarafından otomatik oluşturuldu.</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot gray"></div>
+                                <div class="timeline-content">
+                                    <div class="time">01 Ara • 00:00</div>
+                                    <div class="event">Dönem Sonu</div>
+                                    <div class="desc">Hizmet dönemi tamamlandı.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+
+</html>

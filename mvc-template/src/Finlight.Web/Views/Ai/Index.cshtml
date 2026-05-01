@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Finlight AI";
+    ViewData["ActiveNav"] = "Ai";
+    ViewData["PageKicker"] = "Açıklanabilir finans danışmanı";
+    ViewData["PageTitle"] = "Finlight AI";
+    ViewData["PageDescription"] = "Riskleri, tahsilat önceliklerini ve nakit senaryolarını açıklar; otonom işlem yapmaz.";
+}
+
+<partial name="_PageHeader" />
+
+<div class="grid-2-1">
+    <section class="card chart-card">
+        <div class="card-header"><h3>Nakit Risk Analizi</h3><span class="status warning">Açıklanabilir öneri</span></div>
+        <div class="insight-item">
+            <div class="tag warning">Tahsilat gecikmesi</div>
+            <p>Atlas Lojistik tahsilatı gecikirse KDV haftasında nakit tamponu hedefin altına düşer.</p>
+        </div>
+        <div class="insight-item">
+            <div class="tag success">Önerilen aksiyon</div>
+            <p>Önce ödeme sözü al, sonra Nova Reklam için erken ödeme indirimi öner.</p>
+        </div>
+    </section>
+    <aside class="card insight-card">
+        <div class="card-header"><h3><i class="fa-solid fa-robot"></i> AI sınırı</h3></div>
+        <p class="text-muted">Bu katman kararları açıklar; mail gönderme, ödeme alma veya banka işlemi yapma yetkisi backend onayı olmadan verilmez.</p>
+    </aside>
+</div>

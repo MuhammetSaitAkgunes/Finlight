@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlight - Ayarlar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finlight<span class="dot">.</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="tahsilat.html"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilat</a>
+                <a href="nakit_takvimi.html"><i class="fa-solid fa-calendar-days"></i> Nakit Takvimi</a>
+                <a href="gelirgider.html"><i class="fa-solid fa-wallet"></i> Gelir & Gider</a>
+                <a href="cariler.html"><i class="fa-solid fa-users"></i> Cariler</a>
+                <a href="evrak_uyum.html"><i class="fa-solid fa-file-shield"></i> Evrak & Uyum</a>
+                <a href="ai.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Finlight AI</a>
+                <a href="ayarlar.html"><i class="fa-solid fa-gear"></i> Ayarlar</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="top-bar">
+                <div class="breadcrumb">
+                    <span class="text-muted">Hesap</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <span>Ayarlar</span>
+                </div>
+                <div class="actions">
+                    <button class="btn-primary" onclick="alert('Değişiklikler kaydedildi!')"><i
+                            class="fa-solid fa-check"></i> Değişiklikleri Kaydet</button>
+                    <div class="user-profile">
+                        <div class="avatar">BK</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="settings-container">
+                <div class="settings-sidebar">
+                    <div class="settings-nav-item active" data-target="profile">
+                        <i class="fa-regular fa-user"></i> Profil Bilgileri
+                    </div>
+                    <div class="settings-nav-item" data-target="security">
+                        <i class="fa-solid fa-shield-halved"></i> Güvenlik & �?ifre
+                    </div>
+                    <div class="settings-nav-item" data-target="notifications">
+                        <i class="fa-regular fa-bell"></i> Bildirimler
+                    </div>
+                    <div class="settings-nav-item" data-target="billing">
+                        <i class="fa-solid fa-credit-card"></i> Plan & Faturalar
+                    </div>
+                    <div class="settings-nav-item text-red"
+                        style="margin-top: auto; border-top: 1px solid var(--border-color);">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> Çıkış Yap
+                    </div>
+                </div>
+
+                <div class="settings-content">
+
+                    <div id="profile" class="tab-content active">
+                        <div class="card mb-30">
+                            <h3 class="card-title">Profil Fotoğrafı</h3>
+                            <div class="avatar-upload-area">
+                                <div class="avatar-preview">BK</div>
+                                <div class="upload-controls">
+                                    <button class="btn-primary-outline btn-sm">Yeni Fotoğraf Yükle</button>
+                                    <button class="btn-sm-outline text-red">Kaldır</button>
+                                    <p class="text-muted text-xs mt-2">JPG, GIF veya PNG. Max 1MB.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3 class="card-title">Kişisel Bilgiler</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Adınız</label>
+                                    <input type="text" value="Burak">
+                                </div>
+                                <div class="form-group">
+                                    <label>Soyadınız</label>
+                                    <input type="text" value="K.">
+                                </div>
+                                <div class="form-group">
+                                    <label>E-posta Adresi</label>
+                                    <input type="email" value="burak@finlight.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>Telefon Numarası</label>
+                                    <input type="tel" value="+90 555 123 45 67">
+                                </div>
+                                <div class="form-group full">
+                                    <label>Kullanıcı Rolü</label>
+                                    <input type="text" value="Yönetici (Admin)" disabled style="opacity: 0.5;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="security" class="tab-content">
+                        <div class="card mb-30">
+                            <h3 class="card-title">�?ifre Değiştir</h3>
+                            <div class="form-group full">
+                                <label>Mevcut �?ifre</label>
+                                <input type="password" placeholder="••••••••">
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Yeni �?ifre</label>
+                                    <input type="password">
+                                </div>
+                                <div class="form-group">
+                                    <label>Yeni �?ifre (Tekrar)</label>
+                                    <input type="password">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="toggle-row">
+                                <div>
+                                    <h4 style="margin:0; font-size:14px;">İki Faktörlü Doğrulama (2FA)</h4>
+                                    <p class="text-muted text-xs">Hesabınıza giriş yaparken telefonunuza kod gönderilir.
+                                    </p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="notifications" class="tab-content">
+                        <div class="card">
+                            <h3 class="card-title">E-posta Bildirimleri</h3>
+
+                            <div class="toggle-row border-bottom">
+                                <div>
+                                    <span class="d-block font-500">Haftalık Rapor</span>
+                                    <span class="text-muted text-xs">Her Pazartesi finansal özet raporu gönder.</span>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+
+                            <div class="toggle-row border-bottom">
+                                <div>
+                                    <span class="d-block font-500">Tahsilat Uyarıları</span>
+                                    <span class="text-muted text-xs">Vadesi geçen ödemeler için beni uyar.</span>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+
+                            <div class="toggle-row">
+                                <div>
+                                    <span class="d-block font-500">Pazarlama & Yenilikler</span>
+                                    <span class="text-muted text-xs">Yeni Finlight özellikleri hakkında haber
+                                        ver.</span>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="billing" class="tab-content">
+                        <div class="card plan-card-gradient mb-30">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <div>
+                                    <span class="badge-tag"
+                                        style="background: rgba(255,255,255,0.2); color: white;">Mevcut Plan</span>
+                                    <h2 style="color:white; margin: 10px 0;">Finlight Pro</h2>
+                                    <p style="color: rgba(255,255,255,0.8); font-size: 13px;">Yenilenme Tarihi: 12 Ocak
+                                        2026</p>
+                                </div>
+                                <div style="text-align:right;">
+                                    <div style="font-size:24px; font-weight:700; color:white;">₺250<span
+                                            style="font-size:14px; font-weight:400;">/ay</span></div>
+                                    <button class="btn-sm"
+                                        style="background:white; color: var(--primary-color); margin-top:10px;">Planı
+                                        Yükselt</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3 class="card-title">Ödeme Yöntemi</h3>
+                            <div class="payment-method-row">
+                                <div class="pm-icon"><i class="fa-brands fa-cc-mastercard"></i></div>
+                                <div class="pm-info">
+                                    <div class="pm-name">Mastercard •••• 4242</div>
+                                    <div class="pm-sub">Sona Erme: 08/28</div>
+                                </div>
+                                <button class="btn-sm-outline">Düzenle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Sayfa içi Tab Geçiş Mantığı
+        const tabs = document.querySelectorAll('.settings-nav-item');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                // Add active to clicked
+                tab.classList.add('active');
+                const target = tab.getAttribute('data-target');
+                if (target) {
+                    document.getElementById(target).classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

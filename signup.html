@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlight - Kayıt Ol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+    <main class="auth-shell">
+        <section class="auth-panel">
+            <a href="signin.html" class="auth-brand" aria-label="Finlight">
+                <span class="brand-mark"><i class="fa-solid fa-chart-line"></i></span>
+                <span>Finlight<span class="dot">.</span></span>
+            </a>
+
+            <div class="auth-card">
+                <div class="eyebrow"><i class="fa-solid fa-building-shield"></i> Demo çalışma alanı</div>
+                <h1 class="auth-title">Finans kontrolünü başlat.</h1>
+                <p class="auth-copy">
+                    Test verileriyle çalışan bir şirket alanı oluştur ve Finlight’ın dashboard deneyimini hemen incele.
+                </p>
+
+                <form class="auth-form" action="dashboard.html" method="get">
+                    <div class="field-group">
+                        <label for="name">Ad soyad</label>
+                        <div class="input-wrap">
+                            <i class="fa-regular fa-user"></i>
+                            <input id="name" name="name" type="text" value="Burak Kaya" autocomplete="name" required>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="company">Şirket adı</label>
+                        <div class="input-wrap">
+                            <i class="fa-regular fa-building"></i>
+                            <input id="company" name="company" type="text" value="Finlight Demo Ltd."
+                                autocomplete="organization" required>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="email">E-posta</label>
+                        <div class="input-wrap">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input id="email" name="email" type="email" value="burak@finlight.demo"
+                                autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="password">Şifre</label>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-lock"></i>
+                            <input id="password" name="password" type="password" value="finlight-demo"
+                                autocomplete="new-password" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Demo alanını aç
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <p class="auth-switch">Zaten hesabın var mı? <a href="signin.html">Giriş yap</a></p>
+                </form>
+
+                <div class="trust-strip" aria-label="Güven göstergeleri">
+                    <span class="trust-item"><i class="fa-solid fa-check"></i> Test verisi</span>
+                    <span class="trust-item"><i class="fa-solid fa-layer-group"></i> Hazır panel</span>
+                    <span class="trust-item"><i class="fa-solid fa-chart-line"></i> Finans akışı</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="auth-side" aria-label="Finlight ürün önizlemesi">
+            <div class="product-preview">
+                <div class="preview-topline">
+                    <span class="preview-kicker">Yeni şirket özeti</span>
+                    <span class="preview-status"><span class="pulse-dot"></span> Demo verisi hazır</span>
+                </div>
+
+                <div class="preview-window">
+                    <div class="window-bar">
+                        <div class="window-dots"><span></span><span></span><span></span></div>
+                        <span class="window-route">finlight.app/onboarding</span>
+                    </div>
+
+                    <div class="preview-body">
+                        <aside class="mock-sidebar" aria-hidden="true">
+                            <span class="mock-nav active"><i class="fa-solid fa-chart-pie"></i></span>
+                            <span class="mock-nav"><i class="fa-solid fa-wallet"></i></span>
+                            <span class="mock-nav"><i class="fa-solid fa-users"></i></span>
+                            <span class="mock-nav"><i class="fa-solid fa-gear"></i></span>
+                        </aside>
+
+                        <div class="mock-main">
+                            <header class="mock-header">
+                                <div>
+                                    <h2>Finlight Demo Ltd.</h2>
+                                    <p>İlk finans özeti ve cari hareketler oluşturuldu.</p>
+                                </div>
+                                <a href="dashboard.html" class="btn-secondary">
+                                    Panele bak
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </header>
+
+                            <div class="metric-grid">
+                                <div class="metric-tile">
+                                    <span class="metric-label">Başlangıç bakiyesi</span>
+                                    <span class="metric-value">₺320.000</span>
+                                    <span class="metric-change">Aktif</span>
+                                </div>
+                                <div class="metric-tile">
+                                    <span class="metric-label">Cari kayıt</span>
+                                    <span class="metric-value">24</span>
+                                    <span class="metric-change">Demo set</span>
+                                </div>
+                                <div class="metric-tile">
+                                    <span class="metric-label">Risk skoru</span>
+                                    <span class="metric-value">82/100</span>
+                                    <span class="metric-change">Stabil</span>
+                                </div>
+                            </div>
+
+                            <div class="mock-grid">
+                                <section class="cashflow-panel">
+                                    <div class="panel-head">
+                                        <span class="panel-title">İlk 6 ay projeksiyon</span>
+                                        <span class="panel-chip">AI tahmin</span>
+                                    </div>
+                                    <div class="chart-bars" aria-hidden="true">
+                                        <div class="bar-set">
+                                            <span class="bar income" style="height: 50%"></span>
+                                            <span class="bar expense" style="height: 38%"></span>
+                                        </div>
+                                        <div class="bar-set">
+                                            <span class="bar income" style="height: 58%"></span>
+                                            <span class="bar expense" style="height: 43%"></span>
+                                        </div>
+                                        <div class="bar-set">
+                                            <span class="bar income" style="height: 64%"></span>
+                                            <span class="bar expense" style="height: 48%"></span>
+                                        </div>
+                                        <div class="bar-set">
+                                            <span class="bar income" style="height: 72%"></span>
+                                            <span class="bar expense" style="height: 52%"></span>
+                                        </div>
+                                        <div class="bar-set">
+                                            <span class="bar forecast" style="height: 80%"></span>
+                                            <span class="bar forecast" style="height: 57%"></span>
+                                        </div>
+                                        <div class="bar-set">
+                                            <span class="bar forecast" style="height: 86%"></span>
+                                            <span class="bar forecast" style="height: 61%"></span>
+                                        </div>
+                                    </div>
+                                    <div class="chart-legend">
+                                        <span><i class="legend-dot income"></i>Gelir</span>
+                                        <span><i class="legend-dot expense"></i>Gider</span>
+                                        <span><i class="legend-dot forecast"></i>Tahmin</span>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div class="insight-tile">
+                                        <span class="insight-icon"><i class="fa-solid fa-users"></i></span>
+                                        <div>
+                                            <p class="insight-title">Cari görünüm</p>
+                                            <p class="insight-copy">En yüksek hacimli 5 müşteri ve 4 tedarikçi demo
+                                                listesine eklendi.</p>
+                                        </div>
+                                    </div>
+                                    <div class="insight-tile">
+                                        <span class="insight-icon ai"><i class="fa-solid fa-brain"></i></span>
+                                        <div>
+                                            <p class="insight-title">İlk öneri</p>
+                                            <p class="insight-copy">Kısa vadeli tahsilat odağı nakit tamponunu
+                                                güçlendirir.</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <section class="timeline-panel">
+                                <div class="panel-head">
+                                    <span class="panel-title">Oluşturulan örnek kayıtlar</span>
+                                    <span class="panel-chip">Bugün</span>
+                                </div>
+                                <div class="timeline-row">
+                                    <span class="timeline-date">09:20</span>
+                                    <span>
+                                        <span class="timeline-name">Teknoloji Marketim</span>
+                                        <span class="timeline-meta">Tahsilat planı</span>
+                                    </span>
+                                    <span class="timeline-amount income">+₺45.000</span>
+                                </div>
+                                <div class="timeline-row">
+                                    <span class="timeline-date">09:24</span>
+                                    <span>
+                                        <span class="timeline-name">Ofis giderleri</span>
+                                        <span class="timeline-meta">Aylık ödeme</span>
+                                    </span>
+                                    <span class="timeline-amount expense">-₺18.000</span>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

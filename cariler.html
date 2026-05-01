@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlight - Cari Yönetimi Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finlight<span class="dot">.</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="tahsilat.html"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilat</a>
+                <a href="nakit_takvimi.html"><i class="fa-solid fa-calendar-days"></i> Nakit Takvimi</a>
+                <a href="gelirgider.html"><i class="fa-solid fa-wallet"></i> Gelir & Gider</a>
+                <a href="cariler.html"><i class="fa-solid fa-users"></i> Cariler</a>
+                <a href="evrak_uyum.html"><i class="fa-solid fa-file-shield"></i> Evrak & Uyum</a>
+                <a href="ai.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Finlight AI</a>
+                <a href="ayarlar.html"><i class="fa-solid fa-gear"></i> Ayarlar</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="top-bar">
+                <div class="breadcrumb">
+                    <span class="text-muted">Finans</span> <i class="fa-solid fa-chevron-right text-xs"></i> <span>Cari
+                        Hesaplar</span>
+                </div>
+                <div class="actions">
+                    <button class="btn-primary" id="addCariBtn"><i class="fa-solid fa-plus"></i> Yeni Cari Kart</button>
+                    <div class="user-profile">
+                        <div class="avatar">BK</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="stats-strip">
+                <div class="strip-item">
+                    <div class="icon-box blue"><i class="fa-solid fa-users"></i></div>
+                    <div>
+                        <div class="strip-label">Toplam Cari</div>
+                        <div class="strip-value">142</div>
+                    </div>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="icon-box green"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <div>
+                        <div class="strip-label">Toplam Alacak</div>
+                        <div class="strip-value text-green">₺842,500</div>
+                    </div>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="icon-box red"><i class="fa-solid fa-arrow-trend-down"></i></div>
+                    <div>
+                        <div class="strip-label">Toplam Borç</div>
+                        <div class="strip-value text-red">₺124,300</div>
+                    </div>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="icon-box purple"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <div class="strip-label">Riskli Cari</div>
+                        <div class="strip-value">3 <small class="text-muted">(Takipte)</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="card table-card">
+                <div class="card-header">
+                    <div>
+                        <h3>Cari Risk & Vade Politikası</h3>
+                        <p class="section-note">Kime ne kadar açık hesap çalışılacağını ödeme alışkanlığına göre gösterir.</p>
+                    </div>
+                    <span class="status warning">AI destekli öneri</span>
+                </div>
+                <div class="policy-grid">
+                    <article class="policy-card danger">
+                        <div class="policy-score">75</div>
+                        <div>
+                            <strong>Atlas Lojistik A.Ş.</strong>
+                            <small>Ort. tahsilat: 47 gün · gecikme: 3 kez · açık bakiye: ₺45.200</small>
+                            <p>Öneri: yeni satışlarda peşin veya maksimum 7 gün vade. Risk limiti ₺25.000'e düşürülsün.</p>
+                        </div>
+                    </article>
+                    <article class="policy-card">
+                        <div class="policy-score safe">12</div>
+                        <div>
+                            <strong>TechSoft Yazılım</strong>
+                            <small>Ort. tahsilat: 9 gün · gecikme: 0 · açık bakiye: ₺120.000</small>
+                            <p>Öneri: 30 gün vade korunabilir. Yüksek hacimli müşteri olarak erken ödeme indirimi denenebilir.</p>
+                        </div>
+                    </article>
+                    <article class="policy-card warning">
+                        <div class="policy-score mid">40</div>
+                        <div>
+                            <strong>Eko Marketler Zinciri</strong>
+                            <small>3 aydır işlem yok · limit kullanımı düşük · veri güncel değil</small>
+                            <p>Öneri: yeni işlem öncesi iletişim bilgisi ve vergi bilgisi doğrulansın.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <div class="toolbar">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Ünvan, vergi no veya yetkili ara...">
+                </div>
+                <div class="filter-group">
+                    <div class="select-wrapper">
+                        <select>
+                            <option>Tüm Tipler</option>
+                            <option>Müşteriler (Alıcı)</option>
+                            <option>Tedarikçiler (Satıcı)</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="select-wrapper">
+                        <select>
+                            <option>Risk Durumu</option>
+                            <option>Düşük Risk</option>
+                            <option>Yüksek Risk</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <button class="btn-icon-square"><i class="fa-solid fa-filter"></i></button>
+                    <button class="btn-icon-square"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header-row">
+                    <div class="col-check"><input type="checkbox"></div>
+                    <div class="col-name">Cari Bilgileri</div>
+                    <div class="col-contact">İletişim</div>
+                    <div class="col-risk">Risk & Limit</div>
+                    <div class="col-balance text-right">Bakiye</div>
+                    <div class="col-action">İşlem</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-check"><input type="checkbox"></div>
+                    <div class="col-name">
+                        <div class="avatar-sq orange">AL</div>
+                        <div>
+                            <div class="row-title">Atlas Lojistik A.�?. <span class="badge-tag">Lojistik</span></div>
+                            <div class="row-sub">VN: 1234567890 • İstanbul</div>
+                        </div>
+                    </div>
+                    <div class="col-contact">
+                        <div class="contact-person">Ahmet Yılmaz</div>
+                        <div class="contact-actions">
+                            <a href="#" class="btn-micro whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#" class="btn-micro email"><i class="fa-regular fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-risk">
+                        <div class="risk-label">
+                            <span>Risk Skoru: 75/100</span>
+                            <span class="text-danger">Yüksek</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="fill danger" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="col-balance text-right">
+                        <div class="amount negative">-₺45,200</div>
+                        <div class="row-sub">Vadesi: <span class="text-danger">2 Gün Geçti</span></div>
+                    </div>
+                    <div class="col-action">
+                        <button class="btn-dots"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-check"><input type="checkbox"></div>
+                    <div class="col-name">
+                        <div class="avatar-sq blue"><img
+                                src="https://ui-avatars.com/api/?name=Tech+Soft&background=3B82F6&color=fff" alt="">
+                        </div>
+                        <div>
+                            <div class="row-title">TechSoft Yazılım <span class="badge-tag">Teknoloji</span></div>
+                            <div class="row-sub">VN: 987654321 • Ankara</div>
+                        </div>
+                    </div>
+                    <div class="col-contact">
+                        <div class="contact-person">Zeynep Demir</div>
+                        <div class="contact-actions">
+                            <a href="#" class="btn-micro whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#" class="btn-micro email"><i class="fa-regular fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-risk">
+                        <div class="risk-label">
+                            <span>Risk Skoru: 12/100</span>
+                            <span class="text-success">Güvenli</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="fill success" style="width: 12%"></div>
+                        </div>
+                    </div>
+                    <div class="col-balance text-right">
+                        <div class="amount positive">+₺120,000</div>
+                        <div class="row-sub">Son İşlem: Bugün</div>
+                    </div>
+                    <div class="col-action">
+                        <button class="btn-dots"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-check"><input type="checkbox"></div>
+                    <div class="col-name">
+                        <div class="avatar-sq gray">EK</div>
+                        <div>
+                            <div class="row-title">Eko Marketler Zinciri</div>
+                            <div class="row-sub">VN: 5554443322 • İzmir</div>
+                        </div>
+                    </div>
+                    <div class="col-contact">
+                        <div class="contact-person">Mehmet Bey</div>
+                        <div class="contact-actions">
+                            <a href="#" class="btn-micro whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-risk">
+                        <div class="risk-label">
+                            <span>Kredi Limiti</span>
+                            <span>%40 Dolu</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="fill warning" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div class="col-balance text-right">
+                        <div class="amount muted">₺0.00</div>
+                        <div class="row-sub">3 aydır işlem yok</div>
+                    </div>
+                    <div class="col-action">
+                        <button class="btn-dots"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <div id="addCariModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Yeni Cari Kart Oluştur</h3>
+                <button class="btn-close" id="closeModal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="addCariForm">
+                    <div class="form-group full">
+                        <label>Cari Tipi</label>
+                        <div class="segment-control">
+                            <input type="radio" name="cariType" id="typeClient" value="client" checked>
+                            <label for="typeClient">Müşteri (Alıcı)</label>
+
+                            <input type="radio" name="cariType" id="typeSupplier" value="supplier">
+                            <label for="typeSupplier">Tedarikçi (Satıcı)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Firma Ünvanı / Ad Soyad</label>
+                            <input type="text" id="inputName" placeholder="Örn: Atlas Lojistik A.�?." required>
+                        </div>
+                        <div class="form-group">
+                            <label>Vergi / TC No</label>
+                            <input type="text" placeholder="10 haneli VKN">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Yetkili Kişi</label>
+                            <input type="text" id="inputPerson" placeholder="Ad Soyad">
+                        </div>
+                        <div class="form-group">
+                            <label>E-posta Adresi</label>
+                            <input type="email" placeholder="iletisim@firma.com">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Telefon</label>
+                            <input type="tel" placeholder="+90 555 ...">
+                        </div>
+                        <div class="form-group">
+                            <label>Sektör / Etiket</label>
+                            <select>
+                                <option>Teknoloji</option>
+                                <option>Lojistik</option>
+                                <option>Perakende</option>
+                                <option>Hizmet</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group full">
+                        <label>Risk Limiti (Finlight AI)</label>
+                        <div class="range-wrapper">
+                            <input type="range" min="0" max="100000" step="1000" value="50000">
+                            <span class="range-value">₺50.000</span>
+                        </div>
+                        <p class="form-hint">AI, bu limit aşıldığında sizi uyaracaktır.</p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-outline" id="cancelModal">İptal</button>
+                <button type="submit" form="addCariForm" class="btn-primary">Kaydet ve Oluştur</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

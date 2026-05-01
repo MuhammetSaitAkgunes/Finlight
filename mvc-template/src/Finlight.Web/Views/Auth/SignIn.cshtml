@@ -1,0 +1,26 @@
+@{
+    Layout = "_AuthLayout";
+    ViewData["Title"] = "Giriş Yap";
+}
+
+<main class="auth-shell">
+    <section class="auth-panel">
+        <a asp-controller="Auth" asp-action="SignIn" class="auth-brand" aria-label="Finlight">
+            <span class="brand-mark"><i class="fa-solid fa-chart-line"></i></span>
+            <span>Finlight<span class="dot">.</span></span>
+        </a>
+        <div class="auth-card">
+            <div class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Güvenli giriş</div>
+            <h1 class="auth-title">Finans paneline devam et.</h1>
+            <p class="auth-copy">Test hesabıyla giriş yaparak Finlight kontrol panelini inceleyebilirsin.</p>
+            <form class="auth-form" asp-controller="Auth" asp-action="SignIn" method="post">
+                @Html.AntiForgeryToken()
+                <div class="field-group"><label for="email">E-posta</label><div class="input-wrap"><i class="fa-regular fa-envelope"></i><input id="email" name="Email" type="email" value="burak@finlight.demo" autocomplete="email" required /></div></div>
+                <div class="field-group"><label for="password">Şifre</label><div class="input-wrap"><i class="fa-solid fa-lock"></i><input id="password" name="Password" type="password" value="finlight-demo" autocomplete="current-password" required /></div></div>
+                <div class="form-row"><label class="check-label"><input type="checkbox" name="RememberMe" checked /><span>Beni hatırla</span></label><a href="#" class="link-muted">Şifremi unuttum</a></div>
+                <button type="submit" class="btn-primary">Demo giriş yap <i class="fa-solid fa-arrow-right"></i></button>
+                <p class="auth-switch">Hesabın yok mu? <a asp-controller="Auth" asp-action="SignUp">Kayıt oluştur</a></p>
+            </form>
+        </div>
+    </section>
+</main>

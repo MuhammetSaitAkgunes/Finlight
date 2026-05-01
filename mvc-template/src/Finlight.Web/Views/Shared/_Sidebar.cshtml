@@ -1,0 +1,23 @@
+@{
+    var active = ViewData["ActiveNav"]?.ToString() ?? "";
+    string IsActive(string key) => string.Equals(active, key, StringComparison.OrdinalIgnoreCase) ? "active" : "";
+}
+
+<aside class="sidebar">
+    <div class="logo">
+        <h2>Finlight<span class="dot">.</span></h2>
+    </div>
+    <nav class="menu">
+        <a asp-controller="Dashboard" asp-action="Index" class='@IsActive("Dashboard")'><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+        <a asp-controller="Collections" asp-action="Index" class='@IsActive("Collections")'><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilat</a>
+        <a asp-controller="CashCalendar" asp-action="Index" class='@IsActive("CashCalendar")'><i class="fa-solid fa-calendar-days"></i> Nakit Takvimi</a>
+        <a asp-controller="Transactions" asp-action="Index" class='@IsActive("Transactions")'><i class="fa-solid fa-wallet"></i> Gelir & Gider</a>
+        <a asp-controller="Customers" asp-action="Index" class='@IsActive("Customers")'><i class="fa-solid fa-users"></i> Cariler</a>
+        <a asp-controller="Compliance" asp-action="Index" class='@IsActive("Compliance")'><i class="fa-solid fa-file-shield"></i> Evrak & Uyum</a>
+        <a asp-controller="Ai" asp-action="Index" class='@IsActive("Ai")'><i class="fa-solid fa-wand-magic-sparkles"></i> Finlight AI</a>
+        <a asp-controller="Settings" asp-action="Index" class='@IsActive("Settings")'><i class="fa-solid fa-gear"></i> Ayarlar</a>
+    </nav>
+    <div class="sidebar-footer">
+        <button class="btn-primary-outline"><i class="fa-solid fa-bell"></i> Kritik Uyarılar</button>
+    </div>
+</aside>

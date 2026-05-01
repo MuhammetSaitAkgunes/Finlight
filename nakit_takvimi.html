@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlight - Nakit Takvimi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finlight<span class="dot">.</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="tahsilat.html"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilat</a>
+                <a href="nakit_takvimi.html"><i class="fa-solid fa-calendar-days"></i> Nakit Takvimi</a>
+                <a href="gelirgider.html"><i class="fa-solid fa-wallet"></i> Gelir & Gider</a>
+                <a href="cariler.html"><i class="fa-solid fa-users"></i> Cariler</a>
+                <a href="evrak_uyum.html"><i class="fa-solid fa-file-shield"></i> Evrak & Uyum</a>
+                <a href="ai.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Finlight AI</a>
+                <a href="ayarlar.html"><i class="fa-solid fa-gear"></i> Ayarlar</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn-primary-outline"><i class="fa-solid fa-sliders"></i> Senaryo Kur</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <span class="page-kicker">7 / 30 / 90 gün görünümü</span>
+                    <h1>Nakit Takvimi</h1>
+                    <p>Gelecek para giriş-çıkışlarını ve kritik haftaları aksiyon alınabilir şekilde izle.</p>
+                </div>
+                <div class="segmented-control">
+                    <button class="active">7 Gün</button>
+                    <button>30 Gün</button>
+                    <button>90 Gün</button>
+                </div>
+            </header>
+
+            <section class="focus-hero">
+                <div>
+                    <span class="hero-label"><i class="fa-solid fa-triangle-exclamation"></i> Senaryo uyarısı</span>
+                    <h2>Atlas tahsilatı 7 gün gecikirse 12 Aralık haftasında kasa açığı oluşabilir.</h2>
+                    <p>Ofis kirasını 3 gün ertelemek veya Nova Reklam tahsilatını öne çekmek açığı kapatır.</p>
+                </div>
+                <div class="hero-actions-inline">
+                    <button class="btn-primary"><i class="fa-solid fa-wand-magic-sparkles"></i> AI senaryo üret</button>
+                    <button class="btn-outline"><i class="fa-solid fa-file-export"></i> Raporla</button>
+                </div>
+            </section>
+
+            <div class="calendar-grid">
+                <div class="cash-day">
+                    <span class="day-name">Bugün</span>
+                    <strong>₺452.500</strong>
+                    <small>Başlangıç nakdi</small>
+                </div>
+                <div class="cash-day danger">
+                    <span class="day-name">06 Ara</span>
+                    <strong>-₺12.500</strong>
+                    <small>ABC Lojistik ödeme</small>
+                </div>
+                <div class="cash-day success">
+                    <span class="day-name">08 Ara</span>
+                    <strong>+₺45.000</strong>
+                    <small>Teknoloji Marketim</small>
+                </div>
+                <div class="cash-day danger">
+                    <span class="day-name">10 Ara</span>
+                    <strong>-₺18.000</strong>
+                    <small>Ofis giderleri</small>
+                </div>
+                <div class="cash-day danger">
+                    <span class="day-name">12 Ara</span>
+                    <strong>-₺27.300</strong>
+                    <small>KDV & stopaj</small>
+                </div>
+                <div class="cash-day success">
+                    <span class="day-name">15 Ara</span>
+                    <strong>+₺18.000</strong>
+                    <small>Nova Reklam</small>
+                </div>
+            </div>
+
+            <div class="grid-2-1">
+                <section class="card table-card">
+                    <div class="card-header">
+                        <h3>Planlanan Giriş / Çıkış</h3>
+                        <a href="gelirgider.html" class="view-all">İşlemleri yönet</a>
+                    </div>
+                    <div class="table-container">
+                        <div class="table-row">
+                            <div class="col-fixed-sm">06.12</div>
+                            <div class="col-flex-2"><strong>ABC Lojistik A.�?.</strong><span class="row-sub">Tedarikçi ödemesi</span></div>
+                            <div class="col-flex-1 text-right amount-red">-₺12.500</div>
+                            <div class="col-flex-1 text-right"><span class="status warning">Yarın</span></div>
+                        </div>
+                        <div class="table-row">
+                            <div class="col-fixed-sm">08.12</div>
+                            <div class="col-flex-2"><strong>Teknoloji Marketim</strong><span class="row-sub">Tahsilat</span></div>
+                            <div class="col-flex-1 text-right amount-green">+₺45.000</div>
+                            <div class="col-flex-1 text-right"><span class="status success">Bekleniyor</span></div>
+                        </div>
+                        <div class="table-row">
+                            <div class="col-fixed-sm">12.12</div>
+                            <div class="col-flex-2"><strong>Vergi ödemeleri</strong><span class="row-sub">KDV ve stopaj</span></div>
+                            <div class="col-flex-1 text-right amount-red">-₺27.300</div>
+                            <div class="col-flex-1 text-right"><span class="status danger">Kritik</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="card insight-card">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-scale-balanced"></i> Denge önerisi</h3>
+                    </div>
+                    <div class="insight-content">
+                        <div class="insight-item">
+                            <div class="tag warning">Risk</div>
+                            <p>Vergi ödemesi ve kira aynı haftada kasa tamponunu zayıflatıyor.</p>
+                        </div>
+                        <div class="insight-item">
+                            <div class="tag success">Çözüm</div>
+                            <p>Nova Reklam tahsilatı için erken ödeme indirimi sunulabilir.</p>
+                        </div>
+                        <a href="tahsilat.html" class="btn-ai">Tahsilatı hızlandır</a>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

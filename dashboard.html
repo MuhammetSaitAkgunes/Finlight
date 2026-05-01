@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlight - Finans Operasyon Merkezi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finlight<span class="dot">.</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="tahsilat.html"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilat</a>
+                <a href="nakit_takvimi.html"><i class="fa-solid fa-calendar-days"></i> Nakit Takvimi</a>
+                <a href="gelirgider.html"><i class="fa-solid fa-wallet"></i> Gelir & Gider</a>
+                <a href="cariler.html"><i class="fa-solid fa-users"></i> Cariler</a>
+                <a href="evrak_uyum.html"><i class="fa-solid fa-file-shield"></i> Evrak & Uyum</a>
+                <a href="ai.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Finlight AI</a>
+                <a href="ayarlar.html"><i class="fa-solid fa-gear"></i> Ayarlar</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn-primary-outline"><i class="fa-solid fa-bell"></i> Kritik Uyarılar</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <span class="page-kicker">Bugünün finans aksiyonları</span>
+                    <h1>Merhaba, Burak</h1>
+                    <p>Para nerede, ne zaman gelecek, ne zaman çıkacak ve bugün hangi cari riskli?</p>
+                </div>
+                <div class="actions">
+                    <button class="btn-icon"><i class="fa-regular fa-bell"></i><span class="badge">5</span></button>
+                    <div class="user-profile">
+                        <div class="avatar">BK</div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="focus-hero">
+                <div>
+                    <span class="hero-label"><i class="fa-solid fa-circle-info"></i> Kritik hafta</span>
+                    <h2>Önümüzdeki 7 günde nakit tamponu ₺41.700 seviyesine düşebilir.</h2>
+                    <p>Atlas Lojistik tahsilatı gecikirse ay sonu ödeme planını yeniden dengelemen gerekecek.</p>
+                </div>
+                <div class="hero-actions-inline">
+                    <a href="tahsilat.html" class="btn-primary"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilata git</a>
+                    <a href="nakit_takvimi.html" class="btn-outline"><i class="fa-solid fa-calendar-days"></i> Takvimi aç</a>
+                </div>
+            </section>
+
+            <section class="value-module-grid">
+                <a href="tahsilat.html" class="value-module-card">
+                    <span class="module-icon green"><i class="fa-solid fa-route"></i></span>
+                    <strong>Akıllı Tahsilat Playbook'u</strong>
+                    <small>Geciken her cari için ara, mail at, ödeme sözü al ve indirim öner sırası.</small>
+                </a>
+                <a href="gelirgider.html#mutabakat" class="value-module-card">
+                    <span class="module-icon blue"><i class="fa-solid fa-building-columns"></i></span>
+                    <strong>Banka Mutabakatı</strong>
+                    <small>Demo banka hareketlerini belge, cari ve işlem kayıtlarıyla eşleştir.</small>
+                </a>
+                <a href="gelirgider.html#onay-merkezi" class="value-module-card">
+                    <span class="module-icon red"><i class="fa-solid fa-stamp"></i></span>
+                    <strong>Fatura & Ödeme Onayı</strong>
+                    <small>Mükerrer fatura, tutar farkı ve eksik belge uyarılarını yakala.</small>
+                </a>
+                <a href="evrak_uyum.html#muhasebeci-paketi" class="value-module-card">
+                    <span class="module-icon purple"><i class="fa-solid fa-box-archive"></i></span>
+                    <strong>Muhasebeci Paketi</strong>
+                    <small>Ay sonu gelir-gider, banka, açık cari ve eksik belge paketini hazırla.</small>
+                </a>
+            </section>
+
+            <div class="kpi-grid">
+                <div class="card kpi-card">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Net Nakit</span>
+                        <i class="fa-solid fa-vault text-blue"></i>
+                    </div>
+                    <div class="kpi-value">₺452.500</div>
+                    <div class="kpi-change positive">+%5,2 geçen aya göre</div>
+                </div>
+
+                <div class="card kpi-card">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Bekleyen Tahsilat</span>
+                        <i class="fa-solid fa-hand-holding-dollar text-green"></i>
+                    </div>
+                    <div class="kpi-value">₺84.200</div>
+                    <div class="kpi-sub text-muted">₺24.500 vadesi geçmiş</div>
+                </div>
+
+                <div class="card kpi-card">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Yaklaşan Ödeme</span>
+                        <i class="fa-solid fa-file-invoice-dollar text-red"></i>
+                    </div>
+                    <div class="kpi-value">₺32.150</div>
+                    <div class="kpi-sub text-muted">Bu hafta 4 ödeme</div>
+                </div>
+
+                <div class="card kpi-card ai-card">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Finansal Sağlık</span>
+                        <i class="fa-solid fa-heart-pulse text-purple"></i>
+                    </div>
+                    <div class="kpi-value">82<span class="text-sm">/100</span></div>
+                    <div class="kpi-change text-purple">Aksiyon gerekli</div>
+                </div>
+            </div>
+
+            <div class="ops-grid">
+                <section class="card chart-card">
+                    <div class="card-header">
+                        <h3>Nakit Akışı & Tahmin</h3>
+                        <div class="legend">
+                            <span class="dot-income"></span> Gelir
+                            <span class="dot-expense"></span> Gider
+                            <span class="dot-ai"></span> Tahmin
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="cashFlowChart"></canvas>
+                    </div>
+                </section>
+
+                <section class="card action-card">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-list-check"></i> Bugün yapılacaklar</h3>
+                    </div>
+                    <div class="action-stack">
+                        <a href="tahsilat.html" class="action-item priority-high">
+                            <span class="action-icon"><i class="fa-solid fa-phone"></i></span>
+                            <span>
+                                <strong>Atlas Lojistik'i ara</strong>
+                                <small>₺12.500 tahsilat 5 gün gecikti.</small>
+                            </span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        <a href="nakit_takvimi.html" class="action-item">
+                            <span class="action-icon purple"><i class="fa-solid fa-sliders"></i></span>
+                            <span>
+                                <strong>Ödeme planını dengele</strong>
+                                <small>Ofis kirası ve KDV aynı haftaya yığılıyor.</small>
+                            </span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        <a href="evrak_uyum.html" class="action-item">
+                            <span class="action-icon blue"><i class="fa-solid fa-file-shield"></i></span>
+                            <span>
+                                <strong>Eksik evrakları tamamla</strong>
+                                <small>3 dekont ve 1 e-Arşiv taslağı bekliyor.</small>
+                            </span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="grid-2-1">
+                <section class="card table-card">
+                    <div class="card-header">
+                        <h3>Riskli Cariler</h3>
+                        <a href="cariler.html" class="view-all">Tüm cariler</a>
+                    </div>
+                    <div class="table-container compact-table">
+                        <div class="table-row">
+                            <div class="col-flex-2">
+                                <strong>Atlas Lojistik A.�?.</strong>
+                                <span class="row-sub">5 gün gecikme · 3 hatırlatma</span>
+                            </div>
+                            <div class="col-flex-1 text-right"><span class="status danger">Yüksek risk</span></div>
+                            <div class="col-flex-1 text-right amount-red">₺12.500</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="col-flex-2">
+                                <strong>Nova Reklam</strong>
+                                <span class="row-sub">Ödeme sözü yarın</span>
+                            </div>
+                            <div class="col-flex-1 text-right"><span class="status warning">Takipte</span></div>
+                            <div class="col-flex-1 text-right amount-green">₺18.000</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="col-flex-2">
+                                <strong>Teknoloji Marketim</strong>
+                                <span class="row-sub">Düzenli ödeme alışkanlığı</span>
+                            </div>
+                            <div class="col-flex-1 text-right"><span class="status success">Sağlıklı</span></div>
+                            <div class="col-flex-1 text-right amount-green">₺45.000</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card insight-card">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> AI aksiyon önerisi</h3>
+                    </div>
+                    <div class="insight-content">
+                        <div class="insight-item">
+                            <div class="tag warning">Nakit riski</div>
+                            <p>Atlas tahsilatı alınmadan KDV ödemesi yapılırsa nakit tamponu hedefin altına düşüyor.</p>
+                        </div>
+                        <div class="insight-item">
+                            <div class="tag success">Önerilen sıra</div>
+                            <p>Önce tahsilat hatırlatması, sonra ofis gideri için 3 günlük erteleme senaryosu.</p>
+                        </div>
+                        <a href="ai.html" class="btn-ai">Detaylı analizi gör</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlight AI - Gelecek Tahmini</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finlight<span class="dot">.</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="tahsilat.html"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilat</a>
+                <a href="nakit_takvimi.html"><i class="fa-solid fa-calendar-days"></i> Nakit Takvimi</a>
+                <a href="gelirgider.html"><i class="fa-solid fa-wallet"></i> Gelir & Gider</a>
+                <a href="cariler.html"><i class="fa-solid fa-users"></i> Cariler</a>
+                <a href="evrak_uyum.html"><i class="fa-solid fa-file-shield"></i> Evrak & Uyum</a>
+                <a href="ai.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Finlight AI</a>
+                <a href="ayarlar.html"><i class="fa-solid fa-gear"></i> Ayarlar</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <h1 class="ai-glow-text">Finlight Yapay Zeka</h1>
+                    <p>Veri tabanlı öngörüler ve senaryo analizi.</p>
+                </div>
+                <div class="actions">
+                    <div class="user-profile">
+                        <div class="avatar">BK</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="card chart-card mb-30"
+                style="border: 1px solid rgba(139, 92, 246, 0.3); padding: 0; overflow: hidden;">
+
+                <div
+                    style="padding: 20px 25px; background: rgba(139, 92, 246, 0.05); border-bottom: 1px solid rgba(139, 92, 246, 0.1); display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display:flex; align-items:center; gap:12px;">
+                        <div class="icon-box purple" style="width: 40px; height: 40px;"><i
+                                class="fa-solid fa-chart-area"></i></div>
+                        <div>
+                            <h3 style="margin:0; font-size: 16px;">AI Nakit Akışı Tahmini</h3>
+                            <p class="text-muted" style="margin:0; font-size:12px;">%95 Güven Aralığı ile Gelecek 6 Ay
+                            </p>
+                        </div>
+                    </div>
+                    <div class="scenario-toggles">
+                        <button class="sc-btn active" data-scenario="base">Baz Senaryo</button>
+                        <button class="sc-btn" data-scenario="stress">Stres Testi (Döviz �?oku)</button>
+                        <button class="sc-btn" data-scenario="growth">Büyüme Odaklı</button>
+                    </div>
+                </div>
+
+                <div class="chart-wrapper" style="height: 400px; padding: 15px;">
+                    <canvas id="forecastChart"></canvas>
+                </div>
+
+                <div
+                    style="padding: 15px 25px; border-top: 1px solid var(--border-color); display: flex; gap: 30px; font-size: 12px; color: var(--text-muted);">
+                    <div><span class="dot-legend solid"></span> Gerçekleşen Veri</div>
+                    <div><span class="dot-legend dashed"></span> AI Tahmin Ortalaması</div>
+                    <div><span class="dot-legend area"></span> Olasılık Aralığı (En iyi/En kötü)</div>
+                </div>
+            </div>
+
+            <div class="grid-2-1">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Finansal Sağlık Göstergeleri</h3>
+                        <button class="btn-icon-sm"><i class="fa-solid fa-circle-info"></i></button>
+                    </div>
+
+                    <div class="metrics-container">
+
+                        <div class="metric-row">
+                            <div class="m-header">
+                                <span class="m-title">Nakit Ömrü (Runway)</span>
+                                <span class="m-value text-green">4.5 Ay</span>
+                            </div>
+                            <div class="progress-bg">
+                                <div class="progress-fill success" style="width: 75%;"></div>
+                            </div>
+                            <p class="m-desc">Hiç satış yapmazsanız kasanız 4.5 ay dayanır. (Sektör Ort: 3 Ay)</p>
+                        </div>
+
+                        <div class="metric-row">
+                            <div class="m-header">
+                                <span class="m-title">Cari Oran (Likidite)</span>
+                                <span class="m-value text-blue">1.8</span>
+                            </div>
+                            <div class="progress-bg">
+                                <div class="progress-fill primary" style="width: 60%;"></div>
+                                <div class="benchmark-line" style="left: 50%;" title="Sektör Ortalaması: 1.5"></div>
+                            </div>
+                            <p class="m-desc">Kısa vadeli borçları ödeme gücünüz yüksek. (Hedef: >1.5)</p>
+                        </div>
+
+                        <div class="metric-row">
+                            <div class="m-header">
+                                <span class="m-title">Ort. Tahsilat Süresi</span>
+                                <span class="m-value text-red">52 Gün</span>
+                            </div>
+                            <div class="progress-bg">
+                                <div class="progress-fill danger" style="width: 85%;"></div>
+                            </div>
+                            <p class="m-desc">Tahsilatlar sektör ortalamasından (45 gün) <strong>7 gün daha
+                                    yavaş</strong>.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card ai-chat-card">
+                    <div class="chat-header">
+                        <i class="fa-solid fa-robot"></i> Finlight Asistan
+                    </div>
+
+                    <div class="chat-body">
+                        <div class="message ai">
+                            <div class="msg-content">
+                                Merhaba Burak g��� <br>
+                                "DSO" yani tahsilat sürenizin uzaması nakit akışını zorluyor. Vadesi geçen 3 büyük
+                                faturayı hatırlatmamı ister misin?
+                            </div>
+                        </div>
+                        <div class="message user">
+                            <div class="msg-content">
+                                Evet, hangileri onlar?
+                            </div>
+                        </div>
+                        <div class="message ai">
+                            <div class="msg-content">
+                                1. Atlas Lojistik (₺45k - 2 gün)<br>
+                                2. Tekno Market (₺12k - 5 gün)<br>
+                                3. Yılmaz A.�?. (₺8k - 1 hafta)<br>
+                                <br>
+                                <em>İpucu: Bu carilere otomatik mail gönderebilirim.</em>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <input type="text" placeholder="Bir soru sorun...">
+                        <button class="btn-send"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3 style="margin-bottom: 20px;">AI Tespitleri</h3>
+            <div class="kpi-grid">
+                <div class="card insight-box">
+                    <div class="in-icon warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="in-title">Tahsilat Gecikmesi</div>
+                    <p class="in-desc">DSO süresi son 3 ayda %15 arttı. Müşteriler ödemeleri geciktiriyor.</p>
+                </div>
+                <div class="card insight-box">
+                    <div class="in-icon success"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                    <div class="in-title">Nakit Fazlası</div>
+                    <p class="in-desc">Önümüzdeki ay ₺150k nakit fazlası oluşacak. Kısa vadeli fona yatırılabilir.</p>
+                </div>
+                <div class="card insight-box">
+                    <div class="in-icon purple"><i class="fa-solid fa-bullseye"></i></div>
+                    <div class="in-title">Kur Riski</div>
+                    <p class="in-desc">Döviz borçlarınız toplam borcun %40'ına ulaştı. Hedge işlemi önerilir.</p>
+                </div>
+                <div class="card insight-box">
+                    <div class="in-icon blue"><i class="fa-solid fa-newspaper"></i></div>
+                    <div class="in-title">Vergi Takvimi</div>
+                    <p class="in-desc">Ayın 26'sında KDV ödemesi (₺24.000) nakit çıkışı planlandı.</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

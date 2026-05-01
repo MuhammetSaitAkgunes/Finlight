@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlight - Tahsilat Merkezi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finlight<span class="dot">.</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="tahsilat.html"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilat</a>
+                <a href="nakit_takvimi.html"><i class="fa-solid fa-calendar-days"></i> Nakit Takvimi</a>
+                <a href="gelirgider.html"><i class="fa-solid fa-wallet"></i> Gelir & Gider</a>
+                <a href="cariler.html"><i class="fa-solid fa-users"></i> Cariler</a>
+                <a href="evrak_uyum.html"><i class="fa-solid fa-file-shield"></i> Evrak & Uyum</a>
+                <a href="ai.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Finlight AI</a>
+                <a href="ayarlar.html"><i class="fa-solid fa-gear"></i> Ayarlar</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn-primary-outline"><i class="fa-solid fa-paper-plane"></i> Hatırlatma Gönder</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <span class="page-kicker">Accounts receivable</span>
+                    <h1>Tahsilat Merkezi</h1>
+                    <p>Geciken alacakları, ödeme sözlerini ve müşteri bazlı tahsilat riskini tek yerden yönet.</p>
+                </div>
+                <button class="btn-primary"><i class="fa-solid fa-plus"></i> Tahsilat planı oluştur</button>
+            </header>
+
+            <div class="kpi-grid">
+                <div class="card kpi-card">
+                    <div class="kpi-header"><span class="kpi-title">Toplam Alacak</span><i class="fa-solid fa-wallet text-blue"></i></div>
+                    <div class="kpi-value">₺84.200</div>
+                    <div class="kpi-sub text-muted">12 açık kayıt</div>
+                </div>
+                <div class="card kpi-card">
+                    <div class="kpi-header"><span class="kpi-title">Vadesi Geçen</span><i class="fa-solid fa-triangle-exclamation text-red"></i></div>
+                    <div class="kpi-value">₺24.500</div>
+                    <div class="kpi-change text-red">3 cari takipte</div>
+                </div>
+                <div class="card kpi-card">
+                    <div class="kpi-header"><span class="kpi-title">Ödeme Sözü</span><i class="fa-solid fa-handshake text-green"></i></div>
+                    <div class="kpi-value">₺36.000</div>
+                    <div class="kpi-sub text-muted">Bu hafta bekleniyor</div>
+                </div>
+                <div class="card kpi-card ai-card">
+                    <div class="kpi-header"><span class="kpi-title">Tahsilat Skoru</span><i class="fa-solid fa-wand-magic-sparkles text-purple"></i></div>
+                    <div class="kpi-value">74<span class="text-sm">/100</span></div>
+                    <div class="kpi-change text-purple">2 aksiyon önerisi</div>
+                </div>
+            </div>
+
+            <section class="card table-card">
+                <div class="card-header">
+                    <div>
+                        <h3>Akıllı Tahsilat Playbook'u</h3>
+                        <p class="section-note">Sadece alacak listesi değil, her cari için sıradaki en iyi aksiyon.</p>
+                    </div>
+                    <span class="status warning">Demo otomasyon</span>
+                </div>
+                <div class="playbook-grid">
+                    <article class="playbook-card danger">
+                        <div class="playbook-head">
+                            <span class="module-icon red"><i class="fa-solid fa-phone"></i></span>
+                            <div>
+                                <strong>Atlas Lojistik A.Ş.</strong>
+                                <small>₺12.500 · 5 gün gecikti · yüksek risk</small>
+                            </div>
+                        </div>
+                        <ol class="action-sequence">
+                            <li class="done">Vade öncesi e-posta gönderildi</li>
+                            <li class="done">SMS hatırlatma gönderildi</li>
+                            <li class="active">Bugün telefonla ödeme sözü al</li>
+                            <li>3 gün içinde ödeme planı öner</li>
+                            <li>Gerekirse erken ödeme indirimi sun</li>
+                        </ol>
+                        <button class="btn-primary"><i class="fa-solid fa-phone"></i> Arama aksiyonunu başlat</button>
+                    </article>
+
+                    <article class="playbook-card">
+                        <div class="playbook-head">
+                            <span class="module-icon green"><i class="fa-solid fa-handshake"></i></span>
+                            <div>
+                                <strong>Nova Reklam</strong>
+                                <small>₺18.000 · yarın ödeme sözü · takipte</small>
+                            </div>
+                        </div>
+                        <ol class="action-sequence">
+                            <li class="done">Ödeme sözü kaydedildi</li>
+                            <li class="active">Yarın sabah kibar hatırlatma gönder</li>
+                            <li>Ödeme gelmezse yeni tarih iste</li>
+                            <li>Risk limitini 30 gün geçici daralt</li>
+                        </ol>
+                        <button class="btn-outline"><i class="fa-solid fa-paper-plane"></i> Hatırlatma taslağı hazırla</button>
+                    </article>
+
+                    <article class="playbook-card">
+                        <div class="playbook-head">
+                            <span class="module-icon blue"><i class="fa-solid fa-percent"></i></span>
+                            <div>
+                                <strong>Teknoloji Marketim</strong>
+                                <small>₺45.000 · düzenli ödeme · düşük risk</small>
+                            </div>
+                        </div>
+                        <ol class="action-sequence">
+                            <li class="active">Erken ödeme için %1 indirim öner</li>
+                            <li>Ödeme linki entegrasyonu için aday göster</li>
+                            <li>Vade politikasını 30 günde tut</li>
+                        </ol>
+                        <button class="btn-outline"><i class="fa-solid fa-wand-magic-sparkles"></i> Teklif metni öner</button>
+                    </article>
+                </div>
+            </section>
+
+            <div class="grid-2-1">
+                <section class="card table-card">
+                    <div class="card-header">
+                        <h3>Vade Yaşlandırma</h3>
+                        <a href="ai.html" class="view-all">AI önceliklendir</a>
+                    </div>
+                    <div class="aging-lanes">
+                        <div class="aging-lane">
+                            <span class="lane-label">0-7 gün</span>
+                            <strong>₺18.700</strong>
+                            <small>4 kayıt</small>
+                        </div>
+                        <div class="aging-lane warning">
+                            <span class="lane-label">8-30 gün</span>
+                            <strong>₺12.500</strong>
+                            <small>1 kayıt</small>
+                        </div>
+                        <div class="aging-lane danger">
+                            <span class="lane-label">30+ gün</span>
+                            <strong>₺12.000</strong>
+                            <small>2 kayıt</small>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <div class="table-header-row">
+                            <div class="col-flex-2">Cari</div>
+                            <div class="col-fixed-sm">Vade</div>
+                            <div class="col-flex-1 text-right">Tutar</div>
+                            <div class="col-flex-1 text-right">Risk</div>
+                            <div class="col-action"></div>
+                        </div>
+                        <div class="table-row">
+                            <div class="col-flex-2"><strong>Atlas Lojistik A.�?.</strong><span class="row-sub">3 hatırlatma gönderildi</span></div>
+                            <div class="col-fixed-sm">5 gün geçti</div>
+                            <div class="col-flex-1 text-right amount-red">₺12.500</div>
+                            <div class="col-flex-1 text-right"><span class="status danger">Yüksek</span></div>
+                            <div class="col-action"><button class="btn-sm">Ara</button></div>
+                        </div>
+                        <div class="table-row">
+                            <div class="col-flex-2"><strong>Nova Reklam</strong><span class="row-sub">Yarın ödeme sözü var</span></div>
+                            <div class="col-fixed-sm">Yarın</div>
+                            <div class="col-flex-1 text-right amount-green">₺18.000</div>
+                            <div class="col-flex-1 text-right"><span class="status warning">Takipte</span></div>
+                            <div class="col-action"><button class="btn-sm-outline">Hatırlat</button></div>
+                        </div>
+                        <div class="table-row">
+                            <div class="col-flex-2"><strong>Teknoloji Marketim</strong><span class="row-sub">Düzenli ödeme geçmişi</span></div>
+                            <div class="col-fixed-sm">3 gün</div>
+                            <div class="col-flex-1 text-right amount-green">₺45.000</div>
+                            <div class="col-flex-1 text-right"><span class="status success">Düşük</span></div>
+                            <div class="col-action"><button class="btn-sm-outline">İzle</button></div>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="card insight-card">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-route"></i> Hatırlatma akışı</h3>
+                    </div>
+                    <div class="workflow-list">
+                        <div class="workflow-step done"><span>1</span><strong>Vade öncesi e-posta</strong><small>3 gün önce gönderildi</small></div>
+                        <div class="workflow-step done"><span>2</span><strong>SMS hatırlatma</strong><small>Vade günü gönderildi</small></div>
+                        <div class="workflow-step active"><span>3</span><strong>Telefon aksiyonu</strong><small>Bugün öneriliyor</small></div>
+                        <div class="workflow-step"><span>4</span><strong>Ödeme planı</strong><small>Gerekirse teklif et</small></div>
+                    </div>
+                    <a href="ai.html" class="btn-ai">Mesaj tonunu öner</a>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

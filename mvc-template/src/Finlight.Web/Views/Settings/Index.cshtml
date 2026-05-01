@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Ayarlar";
+    ViewData["ActiveNav"] = "Settings";
+    ViewData["PageKicker"] = "Şirket ve kullanıcı tercihleri";
+    ViewData["PageTitle"] = "Ayarlar";
+    ViewData["PageDescription"] = "Şirket bilgisi, kullanıcı profili, bildirim tercihleri ve demo plan kartı.";
+}
+
+<partial name="_PageHeader" />
+
+<div class="grid-2-1">
+    <section class="card">
+        <h3 class="card-title">Şirket Bilgisi</h3>
+        <div class="form-grid">
+            <div class="form-group"><label>Şirket adı</label><input type="text" value="Finlight Demo Ltd." /></div>
+            <div class="form-group"><label>Vergi no</label><input type="text" value="1234567890" /></div>
+        </div>
+    </section>
+    <aside class="card plan-card-gradient">
+        <h3>Demo Plan</h3>
+        <p>MVP prototipte tüm modüller test verisiyle açıktır.</p>
+    </aside>
+</div>

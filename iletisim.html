@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlight - İletişim & Destek</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finlight<span class="dot">.</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="tahsilat.html"><i class="fa-solid fa-hand-holding-dollar"></i> Tahsilat</a>
+                <a href="nakit_takvimi.html"><i class="fa-solid fa-calendar-days"></i> Nakit Takvimi</a>
+                <a href="gelirgider.html"><i class="fa-solid fa-wallet"></i> Gelir & Gider</a>
+                <a href="cariler.html"><i class="fa-solid fa-users"></i> Cariler</a>
+                <a href="evrak_uyum.html"><i class="fa-solid fa-file-shield"></i> Evrak & Uyum</a>
+                <a href="ai.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Finlight AI</a>
+                <a href="ayarlar.html"><i class="fa-solid fa-gear"></i> Ayarlar</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <h1>İletişim & Destek</h1>
+                    <p>Sorularınız, önerileriniz veya teknik destek için buradayız.</p>
+                </div>
+                <div class="actions">
+                    <div class="user-profile">
+                        <div class="avatar">BK</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="help-hero-section">
+                <div class="hero-content">
+                    <h2>Size nasıl yardımcı olabiliriz?</h2>
+                    <div class="hero-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Örn: Fatura nasıl kesilir?">
+                    </div>
+                </div>
+            </div>
+
+            <div class="kpi-grid" style="margin-top: -40px; position: relative; z-index: 2;">
+                <div class="card contact-card">
+                    <div class="cc-icon blue"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="cc-info">
+                        <h4>E-Posta Desteği</h4>
+                        <p>Genel sorular için</p>
+                        <a href="mailto:destek@finlight.com" class="cc-link">destek@finlight.com</a>
+                    </div>
+                </div>
+                <div class="card contact-card">
+                    <div class="cc-icon green"><i class="fa-solid fa-phone"></i></div>
+                    <div class="cc-info">
+                        <h4>Canlı Destek Hattı</h4>
+                        <p>Hafta içi 09:00 - 18:00</p>
+                        <a href="tel:+908501234567" class="cc-link">+90 850 123 45 67</a>
+                    </div>
+                </div>
+                <div class="card contact-card">
+                    <div class="cc-icon purple"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="cc-info">
+                        <h4>Genel Merkez</h4>
+                        <p>Kocaeli / Türkiye</p>
+                        <a href="#" class="cc-link">Haritada Gör</a>
+                    </div>
+                </div>
+                <div class="card contact-card">
+                    <div class="cc-icon orange"><i class="fa-brands fa-discord"></i></div>
+                    <div class="cc-info">
+                        <h4>Finlight Topluluğu</h4>
+                        <p>Diğer kullanıcılarla konuş</p>
+                        <a href="#" class="cc-link">Discord'a Katıl</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2-1">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-paper-plane"></i> Destek Talebi Oluştur</h3>
+                    </div>
+                    <form id="contactForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Adınız Soyadınız</label>
+                                <input type="text" value="Burak K." readonly style="opacity: 0.7; cursor: not-allowed;">
+                            </div>
+                            <div class="form-group">
+                                <label>Konu Başlığı</label>
+                                <select>
+                                    <option>Teknik Sorun</option>
+                                    <option>Fatura / Ödeme</option>
+                                    <option>Öneri / İstek</option>
+                                    <option>Hesap İşlemleri</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group full">
+                            <label>Mesajınız</label>
+                            <textarea rows="5" placeholder="Sorununuzu detaylı bir şekilde açıklayın..."
+                                class="modern-textarea"></textarea>
+                        </div>
+
+                        <div class="form-group full">
+                            <label>Dosya Ekle (Opsiyonel)</label>
+                            <div class="file-drop-area">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <span>Ekran görüntüsü sürükleyin veya seçin</span>
+                            </div>
+                        </div>
+
+                        <div style="text-align: right;">
+                            <button type="submit" class="btn-primary" style="padding: 12px 30px;">
+                                <i class="fa-solid fa-share"></i> Talebi Gönder
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Sıkça Sorulan Sorular</h3>
+                    </div>
+
+                    <div class="faq-container">
+                        <details class="faq-item">
+                            <summary>�?ifremi nasıl değiştirebilirim?</summary>
+                            <div class="faq-content">Ayarlar > Güvenlik sekmesinden şifrenizi güncelleyebilirsiniz.
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Finlight AI ücretli mi?</summary>
+                            <div class="faq-content">Pro paket kullanıcıları için Finlight AI ücretsizdir. Basic pakette
+                                aylık 5 sorgu hakkı bulunur.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Verilerim güvende mi?</summary>
+                            <div class="faq-content">Tüm verileriniz 256-bit SSL şifreleme ile korunmakta ve günlük
+                                olarak yedeklenmektedir.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Faturamı indiremiyorum?</summary>
+                            <div class="faq-content">Tarayıcınızın pop-up engelleyicisini kontrol edin veya PDF
+                                okuyucunuzu güncelleyin.</div>
+                        </details>
+                    </div>
+
+                    <div class="faq-footer">
+                        <p>Aradığını bulamadın mı?</p>
+                        <button class="btn-sm-outline">Yardım Merkezine Git</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Form Submit Animasyonu
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+
+            btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Gönderildi!';
+            btn.style.background = '#10B981'; // Yeşil
+
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = ''; // Eski haline dön
+                this.reset();
+                alert("Destek talebiniz başarıyla alındı. Ticket No: #FL-9283");
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>
