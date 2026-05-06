@@ -1,9 +1,11 @@
 # Finlight
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:0F172A,45:16A34A,100:06B6D4&text=Finlight&fontColor=FFFFFF&fontSize=48&fontAlignY=38&desc=SME%20Finance%20Management%20%7C%20Product%20Concept%20%26%20SaaS%20Foundation&descAlignY=60&descSize=16" alt="Finlight" />
+  <img 
+    src="https://capsule-render.vercel.app/api?type=waving&amp;height=180&amp;color=0:0F172A,50:16A34A,100:06B6D4&amp;text=Finlight&amp;fontColor=FFFFFF&amp;fontSize=52&amp;fontAlignY=38&amp;desc=SME%20Finance%20SaaS%20Concept&amp;descAlignY=60&amp;descSize=17" 
+    alt="Finlight - SME Finance SaaS Concept" 
+  />
 </p>
-
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Early%20Stage%20Product%20Concept-F59E0B?style=for-the-badge" alt="Project Status" />
   <img src="https://img.shields.io/badge/Domain-SME%20Finance-16A34A?style=for-the-badge" alt="SME Finance" />
